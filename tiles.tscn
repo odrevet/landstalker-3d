@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6hpoe2xkx6aw"]
+
+[ext_resource type="PackedScene" uid="uid://xm52ivxpm2hh" path="res://assets/tiles/cube.glb" id="1_v6lu7"]
+
+[node name="tiles" type="Node3D"]
+
+[node name="cube" parent="." instance=ExtResource("1_v6lu7")]

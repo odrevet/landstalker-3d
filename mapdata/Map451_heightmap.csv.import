@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://3xs8ebs3wl1l"
+
+[deps]
+
+files=["res://mapdata/Map451_heightmap.0A.translation"]
+
+source_file="res://mapdata/Map451_heightmap.csv"
+dest_files=["res://mapdata/Map451_heightmap.0A.translation"]
+
+[params]
+
+compress=true
+delimiter=0
