@@ -28,4 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 0.968938, 0.247303, 0, -0.247303, 0.968938, 
 environment = SubResource("Environment_jtb81")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -10, 10, 10)
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 100, 0, 0)
+projection = 1
+size = 100.0
+near = 0.001
