@@ -1,12 +1,20 @@
 Use csv exported with landstalker_editor and display in 3d with Godot
 
 
-# Convert heightmap csv to tscn
+# Maps
+
+Maps are Gridmaps with cells generated from an exported heightmap csv
+
+## Convert heightmap csv to tscn
+
+The script `convert_heightmap_tscn.py` read the data from a csv, calculates cells coordinate. A template scene is populated (base scene with no cell).
+
 ```
 cd mapdata
 python convert_heightmap_to_tscn.py Map240_heightmap.csv template.tscn map.tscn
 ```
 
+https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html
 
 # Hero
 
