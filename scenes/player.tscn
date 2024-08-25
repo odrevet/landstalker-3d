@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkrbyup3xittj"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_d0bid"]
+[ext_resource type="Texture2D" uid="uid://b5nwokeghut5k" path="res://assets/hero/down.png" id="1_r3ld0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2337"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_av4ha"]
+size = Vector2(1, 2)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_nl4tt"]
+albedo_texture = ExtResource("1_r3ld0")
+billboard_mode = 1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_d0bid")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_s2337")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_av4ha")
+surface_material_override/0 = SubResource("ORMMaterial3D_nl4tt")
