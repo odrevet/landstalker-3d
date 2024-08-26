@@ -25,11 +25,10 @@ def process_csv_data(csv_data):
             if z < 4000:
                 z /= 100
 
-                # flatten height as warp indicator
+                # warp indicator
                 if z >= 20:
                     z = 0
 
-                print(z)
                 for i in range(int(z) + 1):
                     processed_data.append(f"{x + i * MAP_SIZE}, {y}, {MESH_INDEX}")
     return processed_data

@@ -10,8 +10,7 @@ Maps are Gridmaps with cells generated from an exported heightmap csv
 The script `convert_heightmap_tscn.py` read the data from a csv, calculates cells coordinate. A template scene is populated (base scene with no cell).
 
 ```
-cd mapdata
-python convert_heightmap_to_tscn.py Map240_heightmap.csv template.tscn map.tscn
+python mapdata/convert_heightmap_to_tscn.py mapdata/Map240_heightmap.csv mapdata/template.tscn scenes/map.tscn
 ```
 
 https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html
