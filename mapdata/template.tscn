@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsr1mseggsh6"]
 
-[ext_resource type="MeshLibrary" uid="uid://b0hjxikptljkq" path="res://meshlib/tiles.tres" id="1_teemk"]
+[ext_resource type="MeshLibrary" uid="uid://dg7u68jplw3o8" path="res://meshlib/cube.tres" id="1_uebbm"]
 
 [sub_resource type="Environment" id="Environment_jtb81"]
 background_mode = 1
@@ -12,7 +12,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.251159, 0, 0.200927)
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.07959, 0.176829)
-mesh_library = ExtResource("1_teemk")
+mesh_library = ExtResource("1_uebbm")
 cell_size = Vector3(1, 1, 1)
 data = {
 "cells": PackedInt32Array()
