@@ -3,7 +3,7 @@ import sys
 import re
 
 MAP_SIZE = 65536
-MESH_INDEX = 41
+MESH_INDEX = 0
 
 def read_csv_to_array(file_path):
     array_2d = []
