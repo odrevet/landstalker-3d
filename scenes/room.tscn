@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://blttcgqfo1x58"]
+[gd_scene load_steps=4 format=3 uid="uid://blttcgqfo1x58"]
 
 [ext_resource type="PackedScene" uid="uid://bsr1mseggsh6" path="res://scenes/map.tscn" id="1_krqrg"]
+[ext_resource type="PackedScene" uid="uid://dkrbyup3xittj" path="res://scenes/player.tscn" id="2_txb5a"]
 
 [sub_resource type="Environment" id="Environment_5bxm2"]
 background_mode = 1
@@ -24,3 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 0.968938, 0.247303, 0, -0.247303, 0.968938, 
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_5bxm2")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_txb5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.9828, 5.66803, 17.9871)
