@@ -8,6 +8,13 @@ metadata/hm_left = 5
 metadata/hm_top = 4
 metadata/hm_width = 19
 metadata/hm_height = 26
+metadata/room_name = "Labyrinth/B1F/365 Green Skeleton and Golem Switch Room"
+metadata/room_label = "Room365"
+metadata/room_number = 365
+metadata/room_map = "Map483"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":365,\"x\":18,\"y\":19,\"width\":1,\"height\":2,\"room2\":380,\"x2\":32,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":383,\"x\":36,\"y\":18,\"width\":2,\"height\":1,\"room2\":365,\"x2\":19,\"y2\":36,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

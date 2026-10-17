@@ -8,6 +8,13 @@ metadata/hm_left = 14
 metadata/hm_top = 14
 metadata/hm_width = 17
 metadata/hm_height = 17
+metadata/room_name = "Mercator/East/Interior/Fortune Teller/686 Ver2"
+metadata/room_label = "Room686"
+metadata/room_number = 686
+metadata/room_map = "Map400"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

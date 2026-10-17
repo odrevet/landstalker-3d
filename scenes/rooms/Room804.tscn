@@ -8,6 +8,13 @@ metadata/hm_left = 5
 metadata/hm_top = 5
 metadata/hm_width = 32
 metadata/hm_height = 29
+metadata/room_name = "Massan Secret Cave/804 Pit - 1F"
+metadata/room_label = "Room804"
+metadata/room_number = 804
+metadata/room_map = "Map246"
+metadata/warp_fall_dest = 803
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":592,\"x\":16,\"y\":33,\"width\":1,\"height\":2,\"room2\":804,\"x2\":43,\"y2\":27,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

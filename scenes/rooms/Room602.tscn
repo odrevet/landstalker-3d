@@ -8,6 +8,13 @@ metadata/hm_left = 1
 metadata/hm_top = 5
 metadata/hm_width = 43
 metadata/hm_height = 49
+metadata/room_name = "Gumi/Gumi - Outside/602 Ver2 (Deserted)"
+metadata/room_label = "Room602"
+metadata/room_number = 602
+metadata/room_map = "Map120"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 5
 metadata/hm_top = 9
 metadata/hm_width = 36
 metadata/hm_height = 37
+metadata/room_name = "Labyrinth/B2F/388 Ice Walkway with Lizards"
+metadata/room_label = "Room388"
+metadata/room_number = 388
+metadata/room_map = "Map506"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":388,\"x\":18,\"y\":19,\"width\":2,\"height\":1,\"room2\":385,\"x2\":52,\"y2\":57,\"type\":\"NORMAL\"},{\"room1\":388,\"x\":42,\"y\":19,\"width\":2,\"height\":1,\"room2\":390,\"x2\":21,\"y2\":52,\"type\":\"NORMAL\"},{\"room1\":393,\"x\":58,\"y\":23,\"width\":2,\"height\":1,\"room2\":388,\"x2\":42,\"y2\":48,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

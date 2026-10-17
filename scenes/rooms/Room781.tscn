@@ -8,6 +8,13 @@ metadata/hm_left = 20
 metadata/hm_top = 9
 metadata/hm_width = 42
 metadata/hm_height = 24
+metadata/room_name = "Mir's Tower/8F/781 Jewel Room"
+metadata/room_label = "Room781"
+metadata/room_number = 781
+metadata/room_map = "Map050"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 22
 metadata/hm_width = 35
 metadata/hm_height = 29
+metadata/room_name = "Mercator/Harbour/Public Dock/496 Ver4 (Empty Dock)"
+metadata/room_label = "Room496"
+metadata/room_number = 496
+metadata/room_map = "Map579"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

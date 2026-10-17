@@ -8,6 +8,13 @@ metadata/hm_left = 19
 metadata/hm_top = 16
 metadata/hm_width = 29
 metadata/hm_height = 26
+metadata/room_name = "Mercator Castle/4F/106 South Tower (Top)"
+metadata/room_label = "Room106"
+metadata/room_number = 106
+metadata/room_map = "Map260"
+metadata/warp_fall_dest = 93
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

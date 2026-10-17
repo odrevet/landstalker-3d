@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 9
 metadata/hm_width = 34
 metadata/hm_height = 15
+metadata/room_name = "Overworld/06 - Massan, Greenmaze/532 Massan 6 (Reapers, Giant)"
+metadata/room_label = "Room573"
+metadata/room_number = 573
+metadata/room_map = "Map239"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":570,\"x\":14,\"y\":21,\"width\":1,\"height\":2,\"room2\":573,\"x2\":45,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":573,\"x\":14,\"y\":19,\"width\":1,\"height\":2,\"room2\":572,\"x2\":45,\"y2\":21,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

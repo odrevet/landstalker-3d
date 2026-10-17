@@ -8,6 +8,13 @@ metadata/hm_left = 16
 metadata/hm_top = 4
 metadata/hm_width = 46
 metadata/hm_height = 29
+metadata/room_name = "Mountainous Region/Underpass/548 Lizard and Mushroom Pathway"
+metadata/room_label = "Room548"
+metadata/room_number = 548
+metadata/room_map = "Map558"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":548,\"x\":27,\"y\":37,\"width\":1,\"height\":2,\"room2\":549,\"x2\":32,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":548,\"x\":40,\"y\":29,\"width\":1,\"height\":2,\"room2\":555,\"x2\":30,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":548,\"x\":56,\"y\":15,\"width\":2,\"height\":1,\"room2\":546,\"x2\":28,\"y2\":60,\"type\":\"NORMAL\"},{\"room1\":550,\"x\":25,\"y\":23,\"width\":2,\"height\":1,\"room2\":548,\"x2\":40,\"y2\":40,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

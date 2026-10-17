@@ -8,6 +8,13 @@ metadata/hm_left = 13
 metadata/hm_top = 16
 metadata/hm_width = 52
 metadata/hm_height = 52
+metadata/room_name = "Mountainous Region/Overground/485 East (Orcs, Spectres)"
+metadata/room_label = "Room485"
+metadata/room_number = 485
+metadata/room_map = "Map577"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":484,\"x\":16,\"y\":42,\"width\":1,\"height\":2,\"room2\":485,\"x2\":63,\"y2\":46,\"type\":\"NORMAL\"},{\"room1\":484,\"x\":16,\"y\":53,\"width\":1,\"height\":2,\"room2\":485,\"x2\":63,\"y2\":57,\"type\":\"NORMAL\"},{\"room1\":484,\"x\":20,\"y\":60,\"width\":1,\"height\":2,\"room2\":485,\"x2\":63,\"y2\":60,\"type\":\"NORMAL\"},{\"room1\":485,\"x\":27,\"y\":30,\"width\":2,\"height\":1,\"room2\":486,\"x2\":30,\"y2\":63,\"type\":\"NORMAL\"},{\"room1\":485,\"x\":36,\"y\":61,\"width\":2,\"height\":1,\"room2\":549,\"x2\":25,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":485,\"x\":40,\"y\":30,\"width\":2,\"height\":1,\"room2\":486,\"x2\":43,\"y2\":63,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

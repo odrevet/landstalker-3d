@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 14
 metadata/hm_width = 52
 metadata/hm_height = 52
+metadata/room_name = "Greenmaze/Overground/567 Northeast (Vines)"
+metadata/room_label = "Room567"
+metadata/room_number = 567
+metadata/room_map = "Map311"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":564,\"x\":19,\"y\":28,\"width\":1,\"height\":1,\"room2\":567,\"x2\":62,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":564,\"x\":19,\"y\":44,\"width\":1,\"height\":1,\"room2\":567,\"x2\":62,\"y2\":45,\"type\":\"NORMAL\"},{\"room1\":566,\"x\":32,\"y\":19,\"width\":1,\"height\":1,\"room2\":567,\"x2\":32,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":566,\"x\":53,\"y\":19,\"width\":1,\"height\":1,\"room2\":567,\"x2\":53,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":24,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":37,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":53,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":53,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":32,\"y\":50,\"width\":1,\"height\":1,\"room2\":582,\"x2\":22,\"y2\":34,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":39,\"y\":44,\"width\":1,\"height\":1,\"room2\":582,\"x2\":33,\"y2\":21,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 16
 metadata/hm_height = 16
+metadata/room_name = "Mercator/East/Interior/Monster Prison/682 Ver2 (Kayla, Ink, Wally, Pockets)"
+metadata/room_label = "Room682"
+metadata/room_number = 682
+metadata/room_map = "Map398"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

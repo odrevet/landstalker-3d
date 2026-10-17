@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 12
 metadata/hm_width = 21
 metadata/hm_height = 21
+metadata/room_name = "Lake Shrine/B2F/323 Green Boulder Golem Switch Room"
+metadata/room_label = "Room323"
+metadata/room_number = 323
+metadata/room_map = "Map165"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":323,\"x\":25,\"y\":19,\"width\":2,\"height\":1,\"room2\":327,\"x2\":25,\"y2\":34,\"type\":\"NORMAL\"},{\"room1\":343,\"x\":19,\"y\":19,\"width\":2,\"height\":1,\"room2\":323,\"x2\":19,\"y2\":20,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

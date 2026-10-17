@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 14
 metadata/hm_width = 16
 metadata/hm_height = 17
+metadata/room_name = "Ryuma/622 Mayor's House"
+metadata/room_label = "Room622"
+metadata/room_number = 622
+metadata/room_map = "Map406"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":610,\"x\":44,\"y\":29,\"width\":1,\"height\":1,\"room2\":622,\"x2\":24,\"y2\":28,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

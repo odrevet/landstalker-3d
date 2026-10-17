@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 22
 metadata/hm_width = 35
 metadata/hm_height = 29
+metadata/room_name = "Mercator/Harbour/544 Duke's Dock"
+metadata/room_label = "Room544"
+metadata/room_number = 544
+metadata/room_map = "Map579"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":544,\"x\":45,\"y\":23,\"width\":2,\"height\":1,\"room2\":641,\"x2\":53,\"y2\":47,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

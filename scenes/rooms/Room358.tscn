@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 7
 metadata/hm_width = 11
 metadata/hm_height = 22
+metadata/room_name = "Labyrinth/B1F/358 Switch & Warp Room"
+metadata/room_label = "Room358"
+metadata/room_number = 358
+metadata/room_map = "Map476"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":357,\"x\":27,\"y\":23,\"width\":2,\"height\":1,\"room2\":358,\"x2\":16,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":357,\"x\":31,\"y\":19,\"width\":1,\"height\":2,\"room2\":358,\"x2\":22,\"y2\":16,\"type\":\"NORMAL\"},{\"room1\":358,\"x\":17,\"y\":17,\"width\":1,\"height\":1,\"room2\":359,\"x2\":45,\"y2\":18,\"type\":\"NORMAL\"},{\"room1\":360,\"x\":16,\"y\":15,\"width\":1,\"height\":2,\"room2\":358,\"x2\":17,\"y2\":13,\"type\":\"STAIR_SW\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

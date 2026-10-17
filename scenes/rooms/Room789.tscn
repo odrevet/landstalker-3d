@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 6
 metadata/hm_width = 11
 metadata/hm_height = 10
+metadata/room_name = "Helga's Hut/B3F/789 Steps to Second Challenge"
+metadata/room_label = "Room789"
+metadata/room_number = 789
+metadata/room_map = "Map372"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":789,\"x\":15,\"y\":14,\"width\":1,\"height\":2,\"room2\":787,\"x2\":33,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":794,\"x\":19,\"y\":26,\"width\":1,\"height\":2,\"room2\":789,\"x2\":17,\"y2\":19,\"type\":\"STAIR_SW\"},{\"room1\":794,\"x\":19,\"y\":28,\"width\":1,\"height\":1,\"room2\":789,\"x2\":17,\"y2\":21,\"type\":\"STAIR_SW\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 5
 metadata/hm_width = 40
 metadata/hm_height = 29
+metadata/room_name = "Labyrinth/B2F/382 Spiked Ball Jumping Puzzle"
+metadata/room_label = "Room382"
+metadata/room_number = 382
+metadata/room_map = "Map500"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":382,\"x\":18,\"y\":21,\"width\":1,\"height\":2,\"room2\":375,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":385,\"x\":16,\"y\":17,\"width\":1,\"height\":2,\"room2\":382,\"x2\":51,\"y2\":39,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

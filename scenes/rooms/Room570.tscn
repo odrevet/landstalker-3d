@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 11
 metadata/hm_width = 28
 metadata/hm_height = 28
+metadata/room_name = "Overworld/06 - Massan, Greenmaze/532 Massan 5 (Dahl Chest)"
+metadata/room_label = "Room570"
+metadata/room_number = 570
+metadata/room_map = "Map382"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":558,\"x\":20,\"y\":14,\"width\":2,\"height\":1,\"room2\":570,\"x2\":23,\"y2\":39,\"type\":\"NORMAL\"},{\"room1\":570,\"x\":14,\"y\":21,\"width\":1,\"height\":2,\"room2\":573,\"x2\":45,\"y2\":19,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

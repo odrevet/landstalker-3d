@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 27
 metadata/hm_height = 24
+metadata/room_name = "King Nole's Cave/1F/Chest Hall/154 Ver2 (Mimics & Mushrooms)"
+metadata/room_label = "Room154"
+metadata/room_number = 154
+metadata/room_map = "Map596"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

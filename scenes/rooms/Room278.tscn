@@ -8,6 +8,13 @@ metadata/hm_left = 17
 metadata/hm_top = 16
 metadata/hm_width = 18
 metadata/hm_height = 49
+metadata/room_name = "Destel Well/2F/278 Spike Pit"
+metadata/room_label = "Room278"
+metadata/room_number = 278
+metadata/room_map = "Map426"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":278,\"x\":24,\"y\":59,\"width\":1,\"height\":1,\"room2\":277,\"x2\":29,\"y2\":26,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

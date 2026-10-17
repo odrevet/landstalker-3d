@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 7
 metadata/hm_width = 34
 metadata/hm_height = 15
+metadata/room_name = "Overworld/03 - Gumi, Ryuma, Mercator/452 Gumi 2 (Orcs, Mushrooms)"
+metadata/room_label = "Room452"
+metadata/room_number = 452
+metadata/room_map = "Map235"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":452,\"x\":13,\"y\":19,\"width\":1,\"height\":2,\"room2\":449,\"x2\":55,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":453,\"x\":13,\"y\":19,\"width\":1,\"height\":2,\"room2\":452,\"x2\":44,\"y2\":19,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 15
 metadata/hm_width = 24
 metadata/hm_height = 16
+metadata/room_name = "Mountainous Region/Underpass/551 Secret Exit"
+metadata/room_label = "Room551"
+metadata/room_number = 551
+metadata/room_map = "Map561"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":546,\"x\":28,\"y\":24,\"width\":2,\"height\":1,\"room2\":551,\"x2\":34,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":552,\"x\":25,\"y\":23,\"width\":2,\"height\":1,\"room2\":551,\"x2\":26,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":554,\"x\":47,\"y\":19,\"width\":1,\"height\":1,\"room2\":551,\"x2\":20,\"y2\":27,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

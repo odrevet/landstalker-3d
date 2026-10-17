@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 17
 metadata/hm_height = 20
+metadata/room_name = "Mercator Castle/3F/Kayla's Room/099 Ver2 (Empty)"
+metadata/room_label = "Room099"
+metadata/room_number = 99
+metadata/room_map = "Map280"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

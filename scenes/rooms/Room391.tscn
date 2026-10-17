@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 7
 metadata/hm_width = 20
 metadata/hm_height = 51
+metadata/room_name = "Labyrinth/B2F/391 Three Lizard Switch Room"
+metadata/room_label = "Room391"
+metadata/room_number = 391
+metadata/room_map = "Map509"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":391,\"x\":22,\"y\":15,\"width\":2,\"height\":1,\"room2\":390,\"x2\":34,\"y2\":52,\"type\":\"NORMAL\"},{\"room1\":392,\"x\":59,\"y\":17,\"width\":2,\"height\":1,\"room2\":391,\"x2\":22,\"y2\":23,\"type\":\"STAIR_SE\"},{\"room1\":397,\"x\":18,\"y\":18,\"width\":2,\"height\":1,\"room2\":391,\"x2\":16,\"y2\":31,\"type\":\"STAIR_SE\"},{\"room1\":397,\"x\":18,\"y\":48,\"width\":2,\"height\":1,\"room2\":391,\"x2\":16,\"y2\":61,\"type\":\"STAIR_SE\"},{\"room1\":398,\"x\":18,\"y\":18,\"width\":2,\"height\":1,\"room2\":391,\"x2\":28,\"y2\":31,\"type\":\"STAIR_SE\"},{\"room1\":398,\"x\":18,\"y\":48,\"width\":2,\"height\":1,\"room2\":391,\"x2\":28,\"y2\":61,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

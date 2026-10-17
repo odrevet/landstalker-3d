@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 7
 metadata/hm_width = 19
 metadata/hm_height = 15
+metadata/room_name = "Thieves' Hideout/2F/200 Timed Stair Puzzle"
+metadata/room_label = "Room200"
+metadata/room_number = 200
+metadata/room_map = "Map091"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":196,\"x\":29,\"y\":26,\"width\":2,\"height\":1,\"room2\":200,\"x2\":28,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":197,\"x\":32,\"y\":15,\"width\":2,\"height\":1,\"room2\":200,\"x2\":18,\"y2\":26,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

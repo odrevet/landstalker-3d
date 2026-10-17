@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 20
 metadata/hm_width = 3
 metadata/hm_height = 21
+metadata/room_name = "Verla Mine/B1F/243 Townsmen Secret Path"
+metadata/room_label = "Room243"
+metadata/room_number = 243
+metadata/room_map = "Map329"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":242,\"x\":21,\"y\":19,\"width\":1,\"height\":1,\"room2\":243,\"x2\":13,\"y2\":32,\"type\":\"NORMAL\"},{\"room1\":243,\"x\":13,\"y\":13,\"width\":1,\"height\":1,\"room2\":245,\"x2\":26,\"y2\":33,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

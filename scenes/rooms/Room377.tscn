@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 11
 metadata/hm_width = 21
 metadata/hm_height = 19
+metadata/room_name = "Labyrinth/B2F/377 Green Bubbles and Timed Switch Puzzle"
+metadata/room_label = "Room377"
+metadata/room_number = 377
+metadata/room_map = "Map495"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":377,\"x\":17,\"y\":23,\"width\":1,\"height\":1,\"room2\":370,\"x2\":40,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":385,\"x\":19,\"y\":50,\"width\":1,\"height\":2,\"room2\":377,\"x2\":32,\"y2\":23,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

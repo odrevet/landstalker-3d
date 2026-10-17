@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 17
 metadata/hm_width = 35
 metadata/hm_height = 43
+metadata/room_name = "King Nole's Cave/B1F/Golem Room 1/164 Ver2 (Golems)"
+metadata/room_label = "Room164"
+metadata/room_number = 164
+metadata/room_map = "Map025"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

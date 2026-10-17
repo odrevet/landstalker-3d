@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 16
 metadata/hm_height = 19
+metadata/room_name = "Overworld/Helga's Hut/441 Outside"
+metadata/room_label = "Room441"
+metadata/room_number = 441
+metadata/room_map = "Map209"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":441,\"x\":19,\"y\":18,\"width\":1,\"height\":1,\"room2\":480,\"x2\":26,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":444,\"x\":36,\"y\":24,\"width\":1,\"height\":1,\"room2\":441,\"x2\":26,\"y2\":29,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

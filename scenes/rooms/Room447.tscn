@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 31
 metadata/hm_height = 33
+metadata/room_name = "Overworld/03 - Gumi, Ryuma, Mercator/447 Mercator 4 (Helga's Hut)"
+metadata/room_label = "Room447"
+metadata/room_number = 447
+metadata/room_map = "Map231"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":447,\"x\":13,\"y\":21,\"width\":1,\"height\":2,\"room2\":455,\"x2\":45,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":447,\"x\":13,\"y\":31,\"width\":1,\"height\":2,\"room2\":455,\"x2\":45,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":447,\"x\":38,\"y\":13,\"width\":1,\"height\":1,\"room2\":443,\"x2\":24,\"y2\":52,\"type\":\"NORMAL\"},{\"room1\":448,\"x\":18,\"y\":13,\"width\":2,\"height\":1,\"room2\":447,\"x2\":27,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":448,\"x\":24,\"y\":13,\"width\":2,\"height\":1,\"room2\":447,\"x2\":35,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

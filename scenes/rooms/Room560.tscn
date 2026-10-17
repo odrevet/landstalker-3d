@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 11
 metadata/hm_width = 47
 metadata/hm_height = 43
+metadata/room_name = "Greenmaze/Overground/560 West (Einstein, Cutter)"
+metadata/room_label = "Room560"
+metadata/room_number = 560
+metadata/room_map = "Map269"
+metadata/warp_fall_dest = 580
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":560,\"x\":32,\"y\":13,\"width\":1,\"height\":1,\"room2\":565,\"x2\":34,\"y2\":60,\"type\":\"NORMAL\"},{\"room1\":560,\"x\":54,\"y\":49,\"width\":2,\"height\":1,\"room2\":591,\"x2\":20,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":561,\"x\":13,\"y\":26,\"width\":1,\"height\":1,\"room2\":560,\"x2\":58,\"y2\":26,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

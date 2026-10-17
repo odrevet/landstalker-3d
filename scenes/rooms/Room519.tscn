@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 10
 metadata/hm_width = 34
 metadata/hm_height = 16
+metadata/room_name = "Overworld/05 - Mercator, Mountainous Region, Greenmaze/519 Mountains 1 (Reaper, Skeletons, Lizards)"
+metadata/room_label = "Room519"
+metadata/room_number = 519
+metadata/room_map = "Map230"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":519,\"x\":13,\"y\":20,\"width\":1,\"height\":2,\"room2\":484,\"x2\":63,\"y2\":56,\"type\":\"NORMAL\"},{\"room1\":520,\"x\":13,\"y\":19,\"width\":1,\"height\":2,\"room2\":519,\"x2\":44,\"y2\":20,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

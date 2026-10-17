@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 6
 metadata/hm_width = 35
 metadata/hm_height = 51
+metadata/room_name = "Mercator Crypt/647 Main Hallway"
+metadata/room_label = "Room647"
+metadata/room_number = 647
+metadata/room_map = "Map602"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":647,\"x\":19,\"y\":19,\"width\":2,\"height\":1,\"room2\":646,\"x2\":20,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":22,\"width\":1,\"height\":1,\"room2\":656,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":29,\"width\":1,\"height\":1,\"room2\":655,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":36,\"width\":1,\"height\":1,\"room2\":654,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":43,\"width\":1,\"height\":1,\"room2\":653,\"x2\":30,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":52,\"width\":1,\"height\":1,\"room2\":652,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":19,\"y\":59,\"width\":1,\"height\":1,\"room2\":648,\"x2\":39,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":24,\"y\":26,\"width\":1,\"height\":1,\"room2\":659,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":24,\"y\":33,\"width\":1,\"height\":1,\"room2\":658,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":647,\"x\":24,\"y\":40,\"width\":1,\"height\":1,\"room2\":657,\"x2\":30,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":649,\"x\":14,\"y\":34,\"width\":1,\"height\":2,\"room2\":647,\"x2\":46,\"y2\":61,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

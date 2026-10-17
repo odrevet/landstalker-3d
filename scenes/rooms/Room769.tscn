@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 11
 metadata/hm_width = 18
 metadata/hm_height = 18
+metadata/room_name = "Mir's Tower/5F/769 Warp Room 5 - Small Spiked Balls"
+metadata/room_label = "Room769"
+metadata/room_number = 769
+metadata/room_map = "Map054"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":764,\"x\":41,\"y\":40,\"width\":1,\"height\":1,\"room2\":769,\"x2\":29,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":769,\"x\":18,\"y\":29,\"width\":1,\"height\":1,\"room2\":770,\"x2\":29,\"y2\":18,\"type\":\"NORMAL\"},{\"room1\":769,\"x\":29,\"y\":18,\"width\":1,\"height\":1,\"room2\":771,\"x2\":29,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":769,\"x\":29,\"y\":29,\"width\":1,\"height\":1,\"room2\":764,\"x2\":41,\"y2\":40,\"type\":\"NORMAL\"},{\"room1\":770,\"x\":29,\"y\":18,\"width\":1,\"height\":1,\"room2\":769,\"x2\":18,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":771,\"x\":29,\"y\":29,\"width\":1,\"height\":1,\"room2\":769,\"x2\":29,\"y2\":18,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

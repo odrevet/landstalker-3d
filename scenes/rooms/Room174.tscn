@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 26
 metadata/hm_height = 27
+metadata/room_name = "Waterfall Shrine/B1F/174 Steps to 1F"
+metadata/room_label = "Room174"
+metadata/room_number = 174
+metadata/room_map = "Map014"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":174,\"x\":19,\"y\":19,\"width\":1,\"height\":2,\"room2\":179,\"x2\":19,\"y2\":18,\"type\":\"STAIR_SW\"},{\"room1\":174,\"x\":19,\"y\":31,\"width\":2,\"height\":1,\"room2\":179,\"x2\":18,\"y2\":30,\"type\":\"STAIR_SE\"},{\"room1\":175,\"x\":16,\"y\":51,\"width\":1,\"height\":2,\"room2\":174,\"x2\":37,\"y2\":34,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

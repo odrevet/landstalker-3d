@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 12
 metadata/hm_width = 23
 metadata/hm_height = 21
+metadata/room_name = "Lake Shrine/B2F/325 Red Lizard Pit Puzzle Room"
+metadata/room_label = "Room325"
+metadata/room_number = 325
+metadata/room_map = "Map226"
+metadata/warp_fall_dest = 328
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":326,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":325,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

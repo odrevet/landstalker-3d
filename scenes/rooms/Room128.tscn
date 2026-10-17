@@ -8,6 +8,13 @@ metadata/hm_left = 21
 metadata/hm_top = 21
 metadata/hm_width = 39
 metadata/hm_height = 24
+metadata/room_name = "King Nole's Palace/3F/128 Purple Lizard Trap Room"
+metadata/room_label = "Room128"
+metadata/room_number = 128
+metadata/room_map = "Map461"
+metadata/warp_fall_dest = 125
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

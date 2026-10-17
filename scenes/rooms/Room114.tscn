@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 5
 metadata/hm_width = 47
 metadata/hm_height = 51
+metadata/room_name = "King Nole's Palace/B1F/114 Path with Pillars"
+metadata/room_label = "Room114"
+metadata/room_number = 114
+metadata/room_map = "Map331"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":114,\"x\":17,\"y\":19,\"width\":1,\"height\":1,\"room2\":421,\"x2\":57,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":121,\"x\":16,\"y\":25,\"width\":1,\"height\":3,\"room2\":114,\"x2\":58,\"y2\":58,\"type\":\"NORMAL\"},{\"room1\":421,\"x\":57,\"y\":62,\"width\":1,\"height\":1,\"room2\":114,\"x2\":17,\"y2\":19,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

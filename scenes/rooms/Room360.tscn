@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 11
 metadata/hm_width = 14
 metadata/hm_height = 16
+metadata/room_name = "Labyrinth/B2F/360 Stairs to Switch Room"
+metadata/room_label = "Room360"
+metadata/room_number = 360
+metadata/room_map = "Map478"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":360,\"x\":16,\"y\":15,\"width\":1,\"height\":2,\"room2\":358,\"x2\":17,\"y2\":13,\"type\":\"STAIR_SW\"},{\"room1\":360,\"x\":21,\"y\":23,\"width\":2,\"height\":1,\"room2\":357,\"x2\":34,\"y2\":26,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

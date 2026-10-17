@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 1
 metadata/hm_width = 29
 metadata/hm_height = 15
+metadata/room_name = "Verla Mine/B1F/240 Revolving Spiked Ball Room"
+metadata/room_label = "Room240"
+metadata/room_number = 240
+metadata/room_map = "Map327"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":233,\"x\":19,\"y\":19,\"width\":1,\"height\":1,\"room2\":240,\"x2\":40,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":239,\"x\":33,\"y\":18,\"width\":1,\"height\":1,\"room2\":240,\"x2\":13,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":240,\"x\":38,\"y\":13,\"width\":1,\"height\":1,\"room2\":241,\"x2\":14,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

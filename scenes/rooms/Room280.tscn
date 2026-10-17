@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 10
 metadata/hm_width = 19
 metadata/hm_height = 51
+metadata/room_name = "Destel Well/3F/280 Block Jumping Puzzle Room"
+metadata/room_label = "Room280"
+metadata/room_number = 280
+metadata/room_map = "Map425"
+metadata/warp_fall_dest = 278
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":279,\"x\":22,\"y\":22,\"width\":1,\"height\":1,\"room2\":280,\"x2\":24,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":280,\"x\":24,\"y\":34,\"width\":1,\"height\":1,\"room2\":281,\"x2\":41,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":280,\"x\":27,\"y\":23,\"width\":1,\"height\":1,\"room2\":283,\"x2\":22,\"y2\":45,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

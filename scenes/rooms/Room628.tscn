@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 4
 metadata/hm_width = 19
 metadata/hm_height = 19
+metadata/room_name = "Ryuma/Lighthouse Top/628 Ver2 (After Sun Stone Theft)"
+metadata/room_label = "Room628"
+metadata/room_number = 628
+metadata/room_map = "Map063"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

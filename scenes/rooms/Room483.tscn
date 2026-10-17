@@ -8,6 +8,13 @@ metadata/hm_left = 5
 metadata/hm_top = 7
 metadata/hm_width = 28
 metadata/hm_height = 51
+metadata/room_name = "Overworld/09 - Destel, Lake/483 Destel 1 (Mars Stone)"
+metadata/room_label = "Room483"
+metadata/room_number = 483
+metadata/room_map = "Map574"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":483,\"x\":33,\"y\":14,\"width\":2,\"height\":1,\"room2\":488,\"x2\":41,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":726,\"x\":28,\"y\":25,\"width\":2,\"height\":1,\"room2\":483,\"x2\":28,\"y2\":62,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

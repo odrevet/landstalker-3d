@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 19
 metadata/hm_width = 22
 metadata/hm_height = 19
+metadata/room_name = "Destel/733 Shop - Front"
+metadata/room_label = "Room733"
+metadata/room_number = 733
+metadata/room_map = "Map127"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":726,\"x\":34,\"y\":55,\"width\":1,\"height\":1,\"room2\":733,\"x2\":33,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":733,\"x\":24,\"y\":25,\"width\":1,\"height\":1,\"room2\":734,\"x2\":22,\"y2\":15,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

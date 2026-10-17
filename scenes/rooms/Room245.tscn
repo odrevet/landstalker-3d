@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 9
 metadata/hm_width = 18
 metadata/hm_height = 22
+metadata/room_name = "Verla Mine/B1F/245 Elevator to Surface"
+metadata/room_label = "Room245"
+metadata/room_number = 245
+metadata/room_map = "Map342"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = 260
+metadata/warps_json = "[{\"room1\":243,\"x\":13,\"y\":13,\"width\":1,\"height\":1,\"room2\":245,\"x2\":26,\"y2\":33,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

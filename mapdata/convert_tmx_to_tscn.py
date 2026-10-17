@@ -17,6 +17,7 @@ template.
 """
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -25,6 +26,7 @@ import xml.etree.ElementTree as ET
 MAP_SIZE = 65536       # 2^16, used by Godot to pack cell coords into one int
 MESH_INDEX = 0         # single cube mesh in res://meshlib/cube.tres
 WALKABLE_MAX = 4       # first hex digit >= 4 means wall/void
+NO_DESTINATION = 65535 # "no warp destination" sentinel used by the source data
 
 ROOM_NAME_TOKEN = "__ROOM_NAME__"
 CELLS_TOKEN = "PackedInt32Array()"
@@ -56,7 +58,6 @@ class Heightmap:
         }
         heightmap = cls()
         heightmap._load_from_properties(properties)
-        heightmap.room_name = root.get("class", "") or os.path.splitext(os.path.basename(tmx_path))[0]
         return heightmap
 
     def _load_from_properties(self, properties: dict) -> None:
@@ -88,6 +89,94 @@ class Heightmap:
             self.cells.append(row)
 
 
+class RoomData:
+    """Everything we need from a room TMX: heightmap, naming and warps."""
+
+    def __init__(self) -> None:
+        self.heightmap: Heightmap = Heightmap()
+        self.room_name: str = ""
+        self.room_label: str = ""
+        self.room_number: int = -1
+        self.room_map: str = ""
+        self.warp_fall_dest: int = -1
+        self.warp_climb_dest: int = -1
+        self.warps: list[dict] = []
+
+    @classmethod
+    def from_tmx_file(cls, tmx_path: str) -> "RoomData":
+        root = ET.parse(tmx_path).getroot()
+        properties = _load_map_properties(root)
+
+        data = cls()
+        data.heightmap._load_from_properties(properties)
+
+        label = properties.get("RoomLabel", "")
+        data.room_label = label or root.get("class", "") or _file_stem(tmx_path)
+        data.room_name = properties.get("RoomName", "") or data.room_label
+        data.room_number = int(properties.get("RoomNumber", data.room_number))
+        data.room_map = properties.get("RoomMap", "")
+        data.warp_fall_dest = _destination_or_none(properties.get("WarpFallDestination"))
+        data.warp_climb_dest = _destination_or_none(properties.get("WarpClimbDestination"))
+        data.warps = _load_warps(root)
+        return data
+
+
+def _load_map_properties(root: ET.Element) -> dict:
+    """Map-level properties only (ignore per-object properties)."""
+    return {
+        prop.get("name"): prop.get("value")
+        for prop in root.findall("properties/property")
+        if prop.get("name")
+    }
+
+
+def _load_warps(root: ET.Element) -> list[dict]:
+    """Parse the `Warps` objectgroup: one warp zone per object."""
+    warps: list[dict] = []
+    for group in root.findall("objectgroup"):
+        if group.get("name") != "Warps":
+            continue
+        for obj in group.findall("object"):
+            properties = {
+                prop.get("name"): prop.get("value")
+                for prop in obj.findall("properties/property")
+            }
+            if "room1" not in properties:
+                continue
+            warps.append(
+                {
+                    # Tile where this warp zone sits in this room...
+                    "room1": int(properties.get("room1", -1)),
+                    "x": int(obj.get("x", "0")),
+                    "y": int(obj.get("y", "0")),
+                    "width": int(obj.get("width", "1")),
+                    "height": int(obj.get("height", "1")),
+                    # ...and the arrival point in the destination room.
+                    "room2": int(properties.get("room2", -1)),
+                    "x2": int(properties.get("x2", 0)),
+                    "y2": int(properties.get("y2", 0)),
+                    "type": properties.get("warpType", "NORMAL"),
+                }
+            )
+    return warps
+
+
+def _destination_or_none(value: str | None) -> int:
+    """Map the source `65535` sentinel (no destination) to -1."""
+    if value is None:
+        return -1
+    parsed = int(value)
+    return -1 if parsed == NO_DESTINATION else parsed
+
+
+def _file_stem(path: str) -> str:
+    return os.path.splitext(os.path.basename(path))[0]
+
+
+def _escape_tscn_string(value: str) -> str:
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
 def _parse_hex_values(heightmap_str: str) -> list[str]:
     values: list[str] = []
     for fragment in heightmap_str.replace("\n", ",").split(","):
@@ -113,41 +202,79 @@ def build_cells(heightmap: Heightmap) -> list[int]:
     return triplets
 
 
-def render_scene(template_path: str, room_name: str, cells: list[int], heightmap: Heightmap) -> str:
+def render_scene(template_path: str, room: RoomData, cells: list[int]) -> str:
     with open(template_path, "r") as file:
         content = file.read()
 
-    content = content.replace(ROOM_NAME_TOKEN, room_name)
+    content = _replace_string_metadata(
+        content,
+        {
+            "room_name": room.room_name,
+            "room_label": room.room_label,
+            "room_map": room.room_map,
+            "warps_json": json.dumps(room.warps, separators=(",", ":")),
+        },
+    )
+    content = _replace_int_metadata(
+        content,
+        {
+            "room_number": room.room_number,
+            "warp_fall_dest": room.warp_fall_dest,
+            "warp_climb_dest": room.warp_climb_dest,
+        },
+    )
+    content = re.sub(
+        r"metadata/hm_left = \d+", f"metadata/hm_left = {room.heightmap.left_offset}", content
+    )
+    content = re.sub(
+        r"metadata/hm_top = \d+", f"metadata/hm_top = {room.heightmap.top_offset}", content
+    )
+    content = re.sub(
+        r"metadata/hm_width = \d+", f"metadata/hm_width = {room.heightmap.width}", content
+    )
+    content = re.sub(
+        r"metadata/hm_height = \d+", f"metadata/hm_height = {room.heightmap.height}", content
+    )
+    content = content.replace(ROOM_NAME_TOKEN, room.room_label)
     content = content.replace(CELLS_TOKEN, "PackedInt32Array(" + ", ".join(str(v) for v in cells) + ")")
-    content = re.sub(
-        r"metadata/hm_left = \d+", f"metadata/hm_left = {heightmap.left_offset}", content
-    )
-    content = re.sub(
-        r"metadata/hm_top = \d+", f"metadata/hm_top = {heightmap.top_offset}", content
-    )
-    content = re.sub(
-        r"metadata/hm_width = \d+", f"metadata/hm_width = {heightmap.width}", content
-    )
-    content = re.sub(
-        r"metadata/hm_height = \d+", f"metadata/hm_height = {heightmap.height}", content
-    )
+    return content
+
+
+def _replace_string_metadata(content: str, values: dict[str, str]) -> str:
+    for name, value in values.items():
+        content = re.sub(
+            rf'metadata/{name} = "[^"]*"',
+            f'metadata/{name} = "{_escape_tscn_string(value)}"',
+            content,
+        )
+    return content
+
+
+def _replace_int_metadata(content: str, values: dict[str, int]) -> str:
+    for name, value in values.items():
+        content = re.sub(
+            rf"metadata/{name} = -?\d+", f"metadata/{name} = {value}", content
+        )
     return content
 
 
 def convert_tmx_to_tscn(tmx_path: str, template_path: str, output_path: str, room_name: str | None) -> str:
-    heightmap = Heightmap.from_tmx_file(tmx_path)
-    name = room_name or heightmap.room_name
-    cells = build_cells(heightmap)
-    scene = render_scene(template_path, name, cells, heightmap)
+    room = RoomData.from_tmx_file(tmx_path)
+    if room_name:
+        room.room_label = room_name
+    cells = build_cells(room.heightmap)
+    scene = render_scene(template_path, room, cells)
 
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     with open(output_path, "w") as file:
         file.write(scene)
 
-    occupied = sum(1 for row in heightmap.cells for cell in row if not cell.is_void())
+    occupied = sum(1 for row in room.heightmap.cells for cell in row if not cell.is_void())
     print(
         f"{os.path.basename(tmx_path)} -> {output_path}: "
-        f"{heightmap.width}x{heightmap.height} heightmap, {occupied} terrain columns, {len(cells) // 3} grid cells"
+        f"{room.room_name!r}, {len(room.warps)} warps, "
+        f"{room.heightmap.width}x{room.heightmap.height} heightmap, "
+        f"{occupied} terrain columns, {len(cells) // 3} grid cells"
     )
     return output_path
 

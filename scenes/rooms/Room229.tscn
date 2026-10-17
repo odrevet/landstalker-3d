@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 11
 metadata/hm_height = 18
+metadata/room_name = "Verla Mine/B1F/229 Lifestock Puzzle Room"
+metadata/room_label = "Room229"
+metadata/room_number = 229
+metadata/room_map = "Map317"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":228,\"x\":25,\"y\":18,\"width\":2,\"height\":1,\"room2\":229,\"x2\":19,\"y2\":29,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

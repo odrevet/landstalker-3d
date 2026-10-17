@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 4
 metadata/hm_width = 22
 metadata/hm_height = 14
+metadata/room_name = "Intro/143 Giant Bird"
+metadata/room_label = "Room143"
+metadata/room_number = 143
+metadata/room_map = "Map263"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

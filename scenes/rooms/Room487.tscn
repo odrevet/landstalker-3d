@@ -8,6 +8,13 @@ metadata/hm_left = 15
 metadata/hm_top = 20
 metadata/hm_width = 42
 metadata/hm_height = 46
+metadata/room_name = "Mountainous Region/Overground/487 Northwest (Chests)"
+metadata/room_label = "Room487"
+metadata/room_number = 487
+metadata/room_map = "Map581"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":486,\"x\":43,\"y\":28,\"width\":2,\"height\":1,\"room2\":487,\"x2\":33,\"y2\":57,\"type\":\"NORMAL\"},{\"room1\":487,\"x\":31,\"y\":36,\"width\":1,\"height\":2,\"room2\":492,\"x2\":63,\"y2\":32,\"type\":\"NORMAL\"},{\"room1\":487,\"x\":31,\"y\":43,\"width\":1,\"height\":2,\"room2\":492,\"x2\":63,\"y2\":39,\"type\":\"NORMAL\"},{\"room1\":518,\"x\":29,\"y\":25,\"width\":2,\"height\":1,\"room2\":487,\"x2\":52,\"y2\":57,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

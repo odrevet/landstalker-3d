@@ -8,6 +8,13 @@ metadata/hm_left = 19
 metadata/hm_top = 12
 metadata/hm_width = 19
 metadata/hm_height = 13
+metadata/room_name = "Thieves' Hideout/4F/223 Vine to Top"
+metadata/room_label = "Room223"
+metadata/room_number = 223
+metadata/room_map = "Map102"
+metadata/warp_fall_dest = 221
+metadata/warp_climb_dest = 226
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

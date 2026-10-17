@@ -8,6 +8,13 @@ metadata/hm_left = 21
 metadata/hm_top = 18
 metadata/hm_width = 30
 metadata/hm_height = 22
+metadata/room_name = "Massan/598 Inn, Downstairs"
+metadata/room_label = "Room598"
+metadata/room_number = 598
+metadata/room_map = "Map070"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":592,\"x\":28,\"y\":16,\"width\":1,\"height\":1,\"room2\":598,\"x2\":41,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":598,\"x\":27,\"y\":29,\"width\":1,\"height\":2,\"room2\":600,\"x2\":25,\"y2\":30,\"type\":\"STAIR_SW\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

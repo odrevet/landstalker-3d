@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 19
 metadata/hm_width = 19
 metadata/hm_height = 25
+metadata/room_name = "Gumi/607 Church"
+metadata/room_label = "Room607"
+metadata/room_number = 607
+metadata/room_map = "Map069"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":601,\"x\":44,\"y\":49,\"width\":1,\"height\":1,\"room2\":607,\"x2\":28,\"y2\":36,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

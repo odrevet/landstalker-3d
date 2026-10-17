@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 0
 metadata/hm_width = 51
 metadata/hm_height = 51
+metadata/room_name = "Overworld/09 - Destel, Lake/488 Lake (Duke Cutscene)"
+metadata/room_label = "Room488"
+metadata/room_number = 488
+metadata/room_map = "Map583"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":483,\"x\":33,\"y\":14,\"width\":2,\"height\":1,\"room2\":488,\"x2\":41,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":488,\"x\":21,\"y\":26,\"width\":1,\"height\":2,\"room2\":489,\"x2\":34,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":488,\"x\":35,\"y\":43,\"width\":2,\"height\":1,\"room2\":536,\"x2\":31,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":488,\"x\":38,\"y\":40,\"width\":1,\"height\":2,\"room2\":536,\"x2\":38,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":490,\"x\":14,\"y\":27,\"width\":1,\"height\":2,\"room2\":488,\"x2\":62,\"y2\":22,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

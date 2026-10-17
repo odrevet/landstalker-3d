@@ -8,6 +8,13 @@ metadata/hm_left = 19
 metadata/hm_top = 17
 metadata/hm_width = 25
 metadata/hm_height = 20
+metadata/room_name = "Mercator Castle/B2F/080 Revolving Spiked Ball Room"
+metadata/room_label = "Room080"
+metadata/room_number = 80
+metadata/room_map = "Map288"
+metadata/warp_fall_dest = 91
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":80,\"x\":26,\"y\":27,\"width\":1,\"height\":2,\"room2\":81,\"x2\":42,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":82,\"x\":24,\"y\":26,\"width\":1,\"height\":2,\"room2\":80,\"x2\":36,\"y2\":27,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

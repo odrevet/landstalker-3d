@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 11
 metadata/hm_width = 22
 metadata/hm_height = 26
+metadata/room_name = "Overworld/04 - Mercator, Verla Tunnel, Mir's Tower/462 Twinkle Village"
+metadata/room_label = "Room462"
+metadata/room_number = 462
+metadata/room_map = "Map418"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":462,\"x\":33,\"y\":22,\"width\":1,\"height\":1,\"room2\":461,\"x2\":40,\"y2\":45,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

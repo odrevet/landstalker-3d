@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 3
 metadata/hm_width = 42
 metadata/hm_height = 16
+metadata/room_name = "Overworld/10 - Destel Well, Lake Shrine, Mountainous Region/505 Lake Shrine 4 (Giants)"
+metadata/room_label = "Room505"
+metadata/room_number = 505
+metadata/room_map = "Map622"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":505,\"x\":26,\"y\":26,\"width\":1,\"height\":2,\"room2\":504,\"x2\":42,\"y2\":32,\"type\":\"NORMAL\"},{\"room1\":514,\"x\":26,\"y\":28,\"width\":1,\"height\":2,\"room2\":505,\"x2\":53,\"y2\":26,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

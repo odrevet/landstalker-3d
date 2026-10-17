@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 10
 metadata/hm_width = 27
 metadata/hm_height = 45
+metadata/room_name = "King Nole's Cave/1F/Boulder Trap Room/160 Ver2 (Giants & Mushrooms)"
+metadata/room_label = "Room160"
+metadata/room_number = 160
+metadata/room_map = "Map023"
+metadata/warp_fall_dest = 163
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

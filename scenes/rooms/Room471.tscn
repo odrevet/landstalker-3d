@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 4
 metadata/hm_width = 46
 metadata/hm_height = 10
+metadata/room_name = "Overworld/08 - Verla Mines, Kelketo Waterfall, Destel/471 Verla Mines 1 (Underground Passage)"
+metadata/room_label = "Room471"
+metadata/room_number = 471
+metadata/room_map = "Map468"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":236,\"x\":13,\"y\":18,\"width\":1,\"height\":2,\"room2\":471,\"x2\":57,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":471,\"x\":20,\"y\":19,\"width\":1,\"height\":2,\"room2\":472,\"x2\":46,\"y2\":21,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

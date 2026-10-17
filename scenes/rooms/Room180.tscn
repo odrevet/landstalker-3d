@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 49
 metadata/hm_height = 29
+metadata/room_name = "Waterfall Shrine/1F/180 Prospero's Room"
+metadata/room_label = "Room180"
+metadata/room_number = 180
+metadata/room_map = "Map015"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":180,\"x\":20,\"y\":29,\"width\":1,\"height\":2,\"room2\":179,\"x2\":44,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":180,\"x\":38,\"y\":29,\"width\":1,\"height\":2,\"room2\":181,\"x2\":27,\"y2\":18,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

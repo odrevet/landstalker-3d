@@ -8,6 +8,13 @@ metadata/hm_left = 2
 metadata/hm_top = 13
 metadata/hm_width = 24
 metadata/hm_height = 33
+metadata/room_name = "Overworld/04 - Mercator, Verla Tunnel, Mir's Tower/464 Mir's Tower 3 (Lifestock Puzzle)"
+metadata/room_label = "Room464"
+metadata/room_number = 464
+metadata/room_map = "Map440"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":464,\"x\":24,\"y\":15,\"width\":2,\"height\":1,\"room2\":458,\"x2\":39,\"y2\":41,\"type\":\"NORMAL\"},{\"room1\":465,\"x\":34,\"y\":18,\"width\":2,\"height\":1,\"room2\":464,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

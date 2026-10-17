@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 10
 metadata/hm_width = 11
 metadata/hm_height = 27
+metadata/room_name = "Labyrinth/B3F/413 Switch Spiked Ball Puzzle Room"
+metadata/room_label = "Room413"
+metadata/room_number = 413
+metadata/room_map = "Map531"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":413,\"x\":18,\"y\":18,\"width\":2,\"height\":1,\"room2\":372,\"x2\":17,\"y2\":19,\"type\":\"STAIR_SE\"},{\"room1\":423,\"x\":18,\"y\":18,\"width\":2,\"height\":1,\"room2\":413,\"x2\":18,\"y2\":36,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

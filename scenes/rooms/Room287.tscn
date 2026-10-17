@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 2
 metadata/hm_width = 43
 metadata/hm_height = 51
+metadata/room_name = "Destel Well/3F/287 Purple Skeleton Chest Room"
+metadata/room_label = "Room287"
+metadata/room_number = 287
+metadata/room_map = "Map437"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":287,\"x\":37,\"y\":22,\"width\":2,\"height\":1,\"room2\":288,\"x2\":23,\"y2\":41,\"type\":\"NORMAL\"},{\"room1\":289,\"x\":30,\"y\":23,\"width\":2,\"height\":1,\"room2\":287,\"x2\":33,\"y2\":62,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

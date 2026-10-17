@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 2
 metadata/hm_width = 48
 metadata/hm_height = 52
+metadata/room_name = "Ryuma/Ryuma - Outside/610 Ver1 (Thieves)"
+metadata/room_label = "Room610"
+metadata/room_number = 610
+metadata/room_map = "Map019"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":183,\"x\":16,\"y\":33,\"width\":1,\"height\":2,\"room2\":610,\"x2\":59,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":18,\"y\":57,\"width\":1,\"height\":1,\"room2\":612,\"x2\":32,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":24,\"y\":19,\"width\":2,\"height\":1,\"room2\":439,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":24,\"y\":27,\"width\":1,\"height\":1,\"room2\":623,\"x2\":34,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":25,\"y\":52,\"width\":1,\"height\":1,\"room2\":615,\"x2\":28,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":26,\"y\":36,\"width\":1,\"height\":2,\"room2\":613,\"x2\":37,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":38,\"y\":39,\"width\":1,\"height\":1,\"room2\":618,\"x2\":23,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":38,\"y\":45,\"width\":1,\"height\":1,\"room2\":616,\"x2\":23,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":44,\"y\":29,\"width\":1,\"height\":1,\"room2\":622,\"x2\":24,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":610,\"x\":46,\"y\":45,\"width\":1,\"height\":1,\"room2\":620,\"x2\":18,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 12
 metadata/hm_width = 44
 metadata/hm_height = 46
+metadata/room_name = "Greenmaze/Overground/562 Southeast"
+metadata/room_label = "Room562"
+metadata/room_number = 562
+metadata/room_map = "Map271"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":562,\"x\":14,\"y\":17,\"width\":1,\"height\":1,\"room2\":566,\"x2\":62,\"y2\":22,\"type\":\"NORMAL\"},{\"room1\":562,\"x\":14,\"y\":36,\"width\":1,\"height\":1,\"room2\":566,\"x2\":62,\"y2\":41,\"type\":\"NORMAL\"},{\"room1\":562,\"x\":18,\"y\":14,\"width\":1,\"height\":1,\"room2\":564,\"x2\":23,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":562,\"x\":29,\"y\":14,\"width\":1,\"height\":1,\"room2\":564,\"x2\":34,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":562,\"x\":36,\"y\":26,\"width\":2,\"height\":1,\"room2\":590,\"x2\":21,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":562,\"x\":39,\"y\":39,\"width\":2,\"height\":1,\"room2\":589,\"x2\":21,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":563,\"x\":23,\"y\":14,\"width\":1,\"height\":1,\"room2\":562,\"x2\":23,\"y2\":57,\"type\":\"NORMAL\"},{\"room1\":563,\"x\":48,\"y\":14,\"width\":1,\"height\":1,\"room2\":562,\"x2\":48,\"y2\":57,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

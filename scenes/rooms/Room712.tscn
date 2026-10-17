@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 6
 metadata/hm_width = 38
 metadata/hm_height = 41
+metadata/room_name = "Verla/Verla - Outside/712 Ver2 (After Rescue)"
+metadata/room_label = "Room712"
+metadata/room_number = 712
+metadata/room_map = "Map018"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

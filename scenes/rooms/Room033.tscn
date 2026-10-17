@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 0
 metadata/hm_width = 37
 metadata/hm_height = 46
+metadata/room_name = "Mercator Castle/1F/Outside West/033 Ver2 (After Dungeon Escape)"
+metadata/room_label = "Room033"
+metadata/room_number = 33
+metadata/room_map = "Map615"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

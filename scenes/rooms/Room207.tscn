@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 35
 metadata/hm_height = 24
+metadata/room_name = "Thieves' Hideout/2F/Upper Entrance Room/207 Ver1 (water)"
+metadata/room_label = "Room207"
+metadata/room_number = 207
+metadata/room_map = "Map104"
+metadata/warp_fall_dest = 185
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":207,\"x\":7,\"y\":10,\"width\":2,\"height\":1,\"room2\":210,\"x2\":25,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":207,\"x\":35,\"y\":19,\"width\":2,\"height\":1,\"room2\":210,\"x2\":25,\"y2\":34,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

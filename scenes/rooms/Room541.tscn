@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 11
 metadata/hm_width = 15
 metadata/hm_height = 33
+metadata/room_name = "Overworld/10 - Destel Well, Lake Shrine, Mountainous Region/541 Destel Well 3 (Orange Orcs, Green Bubbles)"
+metadata/room_label = "Room541"
+metadata/room_number = 541
+metadata/room_map = "Map130"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":541,\"x\":19,\"y\":13,\"width\":2,\"height\":1,\"room2\":515,\"x2\":26,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":542,\"x\":19,\"y\":13,\"width\":2,\"height\":1,\"room2\":541,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

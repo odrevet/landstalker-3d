@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 11
 metadata/hm_width = 34
 metadata/hm_height = 17
+metadata/room_name = "Overworld/05 - Mercator, Mountainous Region, Greenmaze/556 Greenmaze 3 - Orc Kings, Spectres"
+metadata/room_label = "Room556"
+metadata/room_number = 556
+metadata/room_map = "Map238"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":556,\"x\":14,\"y\":21,\"width\":1,\"height\":2,\"room2\":460,\"x2\":37,\"y2\":22,\"type\":\"NORMAL\"},{\"room1\":557,\"x\":14,\"y\":19,\"width\":1,\"height\":2,\"room2\":556,\"x2\":45,\"y2\":21,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

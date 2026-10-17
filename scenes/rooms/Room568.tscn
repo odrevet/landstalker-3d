@@ -8,6 +8,13 @@ metadata/hm_left = 1
 metadata/hm_top = 4
 metadata/hm_width = 49
 metadata/hm_height = 50
+metadata/room_name = "Greenmaze/Overground/568 North (Waterfall, Orc Kings)"
+metadata/room_label = "Room568"
+metadata/room_number = 568
+metadata/room_map = "Map312"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":565,\"x\":26,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":26,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":565,\"x\":35,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":36,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":565,\"x\":46,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":46,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":24,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":37,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":567,\"x\":19,\"y\":53,\"width\":1,\"height\":1,\"room2\":568,\"x2\":60,\"y2\":53,\"type\":\"NORMAL\"},{\"room1\":568,\"x\":23,\"y\":34,\"width\":1,\"height\":1,\"room2\":583,\"x2\":31,\"y2\":30,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

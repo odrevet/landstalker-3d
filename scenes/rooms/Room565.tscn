@@ -8,6 +8,13 @@ metadata/hm_left = 13
 metadata/hm_top = 12
 metadata/hm_width = 49
 metadata/hm_height = 49
+metadata/room_name = "Greenmaze/Overground/565 Northwest (Orc Kings)"
+metadata/room_label = "Room565"
+metadata/room_number = 565
+metadata/room_map = "Map306"
+metadata/warp_fall_dest = 575
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":560,\"x\":32,\"y\":13,\"width\":1,\"height\":1,\"room2\":565,\"x2\":34,\"y2\":60,\"type\":\"NORMAL\"},{\"room1\":565,\"x\":26,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":26,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":565,\"x\":35,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":36,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":565,\"x\":46,\"y\":18,\"width\":1,\"height\":1,\"room2\":568,\"x2\":46,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":566,\"x\":19,\"y\":26,\"width\":1,\"height\":1,\"room2\":565,\"x2\":60,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

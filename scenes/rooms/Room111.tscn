@@ -8,6 +8,13 @@ metadata/hm_left = 3
 metadata/hm_top = 1
 metadata/hm_width = 52
 metadata/hm_height = 43
+metadata/room_name = "King Nole's Palace/Treasure Hall/Treasure Room/111 Ver1 (Nole)"
+metadata/room_label = "Room111"
+metadata/room_number = 111
+metadata/room_map = "Map641"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 32
 metadata/hm_top = 12
 metadata/hm_width = 40
 metadata/hm_height = 39
+metadata/room_name = "Mir's Tower/B1F/755 Mushroom Trap Room"
+metadata/room_label = "Room755"
+metadata/room_number = 755
+metadata/room_map = "Map030"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = 751
+metadata/warps_json = "[{\"room1\":756,\"x\":35,\"y\":34,\"width\":2,\"height\":1,\"room2\":755,\"x2\":47,\"y2\":50,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

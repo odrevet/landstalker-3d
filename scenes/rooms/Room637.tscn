@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 2
 metadata/hm_width = 19
 metadata/hm_height = 45
+metadata/room_name = "Mercator/Harbour/637 West Harbour"
+metadata/room_label = "Room637"
+metadata/room_number = 637
+metadata/room_map = "Map411"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":171,\"x\":17,\"y\":19,\"width\":2,\"height\":1,\"room2\":637,\"x2\":16,\"y2\":22,\"type\":\"NORMAL\"},{\"room1\":171,\"x\":17,\"y\":20,\"width\":2,\"height\":1,\"room2\":637,\"x2\":16,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":637,\"x\":15,\"y\":35,\"width\":1,\"height\":3,\"room2\":457,\"x2\":45,\"y2\":22,\"type\":\"NORMAL\"},{\"room1\":637,\"x\":16,\"y\":22,\"width\":2,\"height\":1,\"room2\":171,\"x2\":17,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":637,\"x\":16,\"y\":23,\"width\":2,\"height\":1,\"room2\":171,\"x2\":17,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":637,\"x\":17,\"y\":15,\"width\":2,\"height\":1,\"room2\":636,\"x2\":16,\"y2\":61,\"type\":\"NORMAL\"},{\"room1\":641,\"x\":17,\"y\":33,\"width\":1,\"height\":2,\"room2\":637,\"x2\":29,\"y2\":31,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

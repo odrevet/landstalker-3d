@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 2
 metadata/hm_width = 48
 metadata/hm_height = 52
+metadata/room_name = "Ryuma/Ryuma - Outside/611 Ver2 (After Rescue)"
+metadata/room_label = "Room611"
+metadata/room_number = 611
+metadata/room_map = "Map019"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 4
 metadata/hm_top = 12
 metadata/hm_width = 50
 metadata/hm_height = 51
+metadata/room_name = "Overworld/01 - Massan, Waterfall Shrine/425 Massan Bridge"
+metadata/room_label = "Room425"
+metadata/room_number = 425
+metadata/room_map = "Map007"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":425,\"x\":13,\"y\":55,\"width\":1,\"height\":2,\"room2\":426,\"x2\":49,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":425,\"x\":15,\"y\":49,\"width\":1,\"height\":1,\"room2\":532,\"x2\":62,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":425,\"x\":31,\"y\":13,\"width\":2,\"height\":1,\"room2\":424,\"x2\":30,\"y2\":52,\"type\":\"NORMAL\"},{\"room1\":427,\"x\":19,\"y\":13,\"width\":2,\"height\":1,\"room2\":425,\"x2\":41,\"y2\":62,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 4
 metadata/hm_width = 40
 metadata/hm_height = 35
+metadata/room_name = "Labyrinth/B4F/419 Gola's Hands 2 (Lifestock)"
+metadata/room_label = "Room419"
+metadata/room_number = 419
+metadata/room_map = "Map555"
+metadata/warp_fall_dest = 420
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":419,\"x\":40,\"y\":27,\"width\":1,\"height\":1,\"room2\":412,\"x2\":20,\"y2\":40,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

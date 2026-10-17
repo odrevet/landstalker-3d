@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 23
 metadata/hm_height = 21
+metadata/room_name = "Verla Mine/B1F/234 Crossroads with Orcs and Knights"
+metadata/room_label = "Room234"
+metadata/room_number = 234
+metadata/room_map = "Map323"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":234,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":231,\"x2\":47,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":234,\"x\":25,\"y\":19,\"width\":2,\"height\":1,\"room2\":233,\"x2\":24,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":235,\"x\":21,\"y\":36,\"width\":1,\"height\":2,\"room2\":234,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

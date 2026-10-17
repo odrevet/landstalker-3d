@@ -8,6 +8,13 @@ metadata/hm_left = 13
 metadata/hm_top = 9
 metadata/hm_width = 20
 metadata/hm_height = 7
+metadata/room_name = "Greenmaze/Underpass - SW, SE/588 Warp to Southeast Exit"
+metadata/room_label = "Room588"
+metadata/room_number = 588
+metadata/room_map = "Map356"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":588,\"x\":13,\"y\":16,\"width\":1,\"height\":1,\"room2\":574,\"x2\":40,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":588,\"x\":30,\"y\":16,\"width\":1,\"height\":1,\"room2\":589,\"x2\":24,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":589,\"x\":24,\"y\":35,\"width\":1,\"height\":1,\"room2\":588,\"x2\":30,\"y2\":16,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

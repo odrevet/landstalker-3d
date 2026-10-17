@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 19
 metadata/hm_width = 19
 metadata/hm_height = 25
+metadata/room_name = "Massan/597 Church"
+metadata/room_label = "Room597"
+metadata/room_number = 597
+metadata/room_map = "Map069"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":592,\"x\":37,\"y\":36,\"width\":1,\"height\":1,\"room2\":597,\"x2\":28,\"y2\":36,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

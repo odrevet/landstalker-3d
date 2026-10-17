@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 8
 metadata/hm_width = 29
 metadata/hm_height = 50
+metadata/room_name = "King Nole's Palace/B1F/119 Gold Warrior Arena"
+metadata/room_label = "Room119"
+metadata/room_number = 119
+metadata/room_map = "Map463"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":118,\"x\":19,\"y\":18,\"width\":1,\"height\":3,\"room2\":119,\"x2\":40,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":119,\"x\":16,\"y\":25,\"width\":1,\"height\":3,\"room2\":120,\"x2\":54,\"y2\":18,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

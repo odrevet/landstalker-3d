@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 12
 metadata/hm_width = 21
 metadata/hm_height = 21
+metadata/room_name = "Lake Shrine/B3F/334 Church Warp"
+metadata/room_label = "Room334"
+metadata/room_number = 334
+metadata/room_map = "Map172"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":305,\"x\":25,\"y\":27,\"width\":2,\"height\":1,\"room2\":334,\"x2\":25,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":305,\"x\":25,\"y\":28,\"width\":2,\"height\":1,\"room2\":334,\"x2\":25,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":334,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":351,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":334,\"x\":25,\"y\":19,\"width\":2,\"height\":1,\"room2\":347,\"x2\":25,\"y2\":34,\"type\":\"NORMAL\"},{\"room1\":334,\"x\":25,\"y\":25,\"width\":2,\"height\":1,\"room2\":305,\"x2\":25,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":334,\"x\":25,\"y\":26,\"width\":2,\"height\":1,\"room2\":305,\"x2\":25,\"y2\":28,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

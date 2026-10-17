@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 12
 metadata/hm_width = 24
 metadata/hm_height = 36
+metadata/room_name = "Mir's Tower/3F/760 Path to Library"
+metadata/room_label = "Room760"
+metadata/room_number = 760
+metadata/room_map = "Map039"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":760,\"x\":22,\"y\":22,\"width\":2,\"height\":1,\"room2\":773,\"x2\":32,\"y2\":33,\"type\":\"STAIR_SE\"},{\"room1\":760,\"x\":22,\"y\":45,\"width\":1,\"height\":2,\"room2\":758,\"x2\":27,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":760,\"x\":25,\"y\":30,\"width\":2,\"height\":1,\"room2\":759,\"x2\":60,\"y2\":35,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

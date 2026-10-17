@@ -8,6 +8,13 @@ metadata/hm_left = 21
 metadata/hm_top = 6
 metadata/hm_width = 28
 metadata/hm_height = 22
+metadata/room_name = "King Nole's Cave/B1F/172 Labrynth Warps Room"
+metadata/room_label = "Room172"
+metadata/room_number = 172
+metadata/room_map = "Map611"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":171,\"x\":17,\"y\":17,\"width\":2,\"height\":1,\"room2\":172,\"x2\":31,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":27,\"y\":23,\"width\":2,\"height\":1,\"room2\":422,\"x2\":39,\"y2\":16,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":27,\"y\":24,\"width\":2,\"height\":1,\"room2\":422,\"x2\":39,\"y2\":17,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":31,\"y\":23,\"width\":2,\"height\":1,\"room2\":410,\"x2\":42,\"y2\":41,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":31,\"y\":24,\"width\":2,\"height\":1,\"room2\":410,\"x2\":42,\"y2\":42,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":35,\"y\":23,\"width\":2,\"height\":1,\"room2\":404,\"x2\":30,\"y2\":43,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":35,\"y\":24,\"width\":2,\"height\":1,\"room2\":404,\"x2\":30,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":404,\"x\":30,\"y\":43,\"width\":2,\"height\":1,\"room2\":172,\"x2\":35,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":404,\"x\":30,\"y\":44,\"width\":2,\"height\":1,\"room2\":172,\"x2\":35,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":410,\"x\":42,\"y\":41,\"width\":2,\"height\":1,\"room2\":172,\"x2\":31,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":410,\"x\":42,\"y\":42,\"width\":2,\"height\":1,\"room2\":172,\"x2\":31,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":422,\"x\":39,\"y\":16,\"width\":2,\"height\":1,\"room2\":172,\"x2\":27,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":422,\"x\":39,\"y\":17,\"width\":2,\"height\":1,\"room2\":172,\"x2\":27,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

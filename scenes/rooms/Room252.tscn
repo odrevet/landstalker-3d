@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 6
 metadata/hm_width = 10
 metadata/hm_height = 42
+metadata/room_name = "Verla Mine/B2F/252 Purple Skeleton Room"
+metadata/room_label = "Room252"
+metadata/room_number = 252
+metadata/room_map = "Map337"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":252,\"x\":15,\"y\":50,\"width\":1,\"height\":2,\"room2\":249,\"x2\":38,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":252,\"x\":16,\"y\":19,\"width\":1,\"height\":2,\"room2\":250,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

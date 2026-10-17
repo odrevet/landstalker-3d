@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 12
 metadata/hm_width = 36
 metadata/hm_height = 28
+metadata/room_name = "Overworld/07 - Verla, Verla Tunnel, Verla Mines/474 Outside Verla"
+metadata/room_label = "Room474"
+metadata/room_number = 474
+metadata/room_map = "Map471"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":467,\"x\":15,\"y\":36,\"width\":1,\"height\":2,\"room2\":474,\"x2\":47,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":474,\"x\":14,\"y\":25,\"width\":1,\"height\":2,\"room2\":468,\"x2\":42,\"y2\":41,\"type\":\"NORMAL\"},{\"room1\":474,\"x\":17,\"y\":22,\"width\":2,\"height\":1,\"room2\":537,\"x2\":31,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":474,\"x\":20,\"y\":19,\"width\":1,\"height\":2,\"room2\":537,\"x2\":38,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":474,\"x\":32,\"y\":16,\"width\":2,\"height\":1,\"room2\":711,\"x2\":31,\"y2\":51,\"type\":\"NORMAL\"},{\"room1\":543,\"x\":45,\"y\":23,\"width\":2,\"height\":1,\"room2\":474,\"x2\":32,\"y2\":39,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

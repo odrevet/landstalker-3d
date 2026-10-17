@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 4
 metadata/hm_width = 28
 metadata/hm_height = 38
+metadata/room_name = "Swamp Shrine/2F/013 Key Room"
+metadata/room_label = "Room013"
+metadata/room_number = 13
+metadata/room_map = "Map196"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":16,\"x\":26,\"y\":19,\"width\":2,\"height\":1,\"room2\":13,\"x2\":29,\"y2\":49,\"type\":\"NORMAL\"},{\"room1\":27,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":13,\"x2\":39,\"y2\":39,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

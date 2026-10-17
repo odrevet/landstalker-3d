@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 33
 metadata/hm_height = 19
+metadata/room_name = "Mercator Castle/B1F/047 Path to West Tower with Spiked Ball and Chests"
+metadata/room_label = "Room047"
+metadata/room_number = 47
+metadata/room_map = "Map300"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":38,\"x\":22,\"y\":36,\"width\":1,\"height\":2,\"room2\":47,\"x2\":44,\"y2\":18,\"type\":\"NORMAL\"},{\"room1\":47,\"x\":16,\"y\":28,\"width\":1,\"height\":2,\"room2\":48,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 17
 metadata/hm_width = 23
 metadata/hm_height = 16
+metadata/room_name = "Lake Shrine/B1F/297 Lifestock and Spiked Balls"
+metadata/room_label = "Room297"
+metadata/room_number = 297
+metadata/room_map = "Map149"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":301,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":297,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

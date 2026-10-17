@@ -8,6 +8,13 @@ metadata/hm_left = 20
 metadata/hm_top = 16
 metadata/hm_width = 34
 metadata/hm_height = 28
+metadata/room_name = "Labyrinth/B3F/405 Lifestock Switch Puzzle Room"
+metadata/room_label = "Room405"
+metadata/room_number = 405
+metadata/room_map = "Map523"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":405,\"x\":28,\"y\":35,\"width\":2,\"height\":1,\"room2\":376,\"x2\":27,\"y2\":27,\"type\":\"STAIR_SE\"},{\"room1\":405,\"x\":41,\"y\":35,\"width\":2,\"height\":1,\"room2\":376,\"x2\":40,\"y2\":27,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

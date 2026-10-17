@@ -8,6 +8,13 @@ metadata/hm_left = 15
 metadata/hm_top = 12
 metadata/hm_width = 51
 metadata/hm_height = 36
+metadata/room_name = "Mercator/Harbour/Main Harbour/644 Ver4 (After Lighthouse Repaired)"
+metadata/room_label = "Room644"
+metadata/room_number = 644
+metadata/room_map = "Map626"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

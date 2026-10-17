@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 6
 metadata/hm_width = 12
 metadata/hm_height = 11
+metadata/room_name = "Thieves' Hideout/4F/Treasure Room/225 Ver2 (Kayla)"
+metadata/room_label = "Room225"
+metadata/room_number = 225
+metadata/room_map = "Map103"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

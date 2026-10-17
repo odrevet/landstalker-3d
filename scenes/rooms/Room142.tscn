@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 0
 metadata/hm_width = 40
 metadata/hm_height = 42
+metadata/room_name = "Intro/142 Kalva Harbor"
+metadata/room_label = "Room142"
+metadata/room_number = 142
+metadata/room_map = "Map243"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

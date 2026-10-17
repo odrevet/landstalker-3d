@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 18
 metadata/hm_height = 18
+metadata/room_name = "Mercator Castle/1F/Guard's Quarters/079 Ver2 (Under Attack from Green Knights)"
+metadata/room_label = "Room079"
+metadata/room_number = 79
+metadata/room_map = "Map298"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 0
 metadata/hm_width = 52
 metadata/hm_height = 16
+metadata/room_name = "Intro/Jypta Ruins/139 Sea Bridge"
+metadata/room_label = "Room139"
+metadata/room_number = 139
+metadata/room_map = "Map142"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

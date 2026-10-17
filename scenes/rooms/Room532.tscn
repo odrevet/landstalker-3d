@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 13
 metadata/hm_width = 51
 metadata/hm_height = 18
+metadata/room_name = "Overworld/06 - Massan, Greenmaze/532 Massan 1 (Underground Passage)"
+metadata/room_label = "Room532"
+metadata/room_number = 532
+metadata/room_map = "Map568"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":425,\"x\":15,\"y\":49,\"width\":1,\"height\":1,\"room2\":532,\"x2\":62,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":569,\"x\":43,\"y\":33,\"width\":2,\"height\":1,\"room2\":532,\"x2\":21,\"y2\":29,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

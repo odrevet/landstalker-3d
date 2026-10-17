@@ -8,6 +8,13 @@ metadata/hm_left = 18
 metadata/hm_top = 22
 metadata/hm_width = 35
 metadata/hm_height = 29
+metadata/room_name = "Overworld/07 - Verla, Verla Tunnel, Verla Mines/543 Verla Dock"
+metadata/room_label = "Room543"
+metadata/room_number = 543
+metadata/room_map = "Map579"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":543,\"x\":45,\"y\":23,\"width\":2,\"height\":1,\"room2\":474,\"x2\":32,\"y2\":39,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

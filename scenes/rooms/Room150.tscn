@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 5
 metadata/hm_width = 47
 metadata/hm_height = 31
+metadata/room_name = "King Nole's Cave/1F/Entrance Hall/150 Ver2 (Reapers)"
+metadata/room_label = "Room150"
+metadata/room_number = 150
+metadata/room_map = "Map240"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 16
 metadata/hm_top = 15
 metadata/hm_width = 26
 metadata/hm_height = 32
+metadata/room_name = "Overworld/Helga's Hut/444 Vase Puzzle"
+metadata/room_label = "Room444"
+metadata/room_number = 444
+metadata/room_map = "Map212"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":443,\"x\":18,\"y\":17,\"width\":1,\"height\":1,\"room2\":444,\"x2\":25,\"y2\":42,\"type\":\"NORMAL\"},{\"room1\":443,\"x\":27,\"y\":17,\"width\":2,\"height\":1,\"room2\":444,\"x2\":34,\"y2\":42,\"type\":\"NORMAL\"},{\"room1\":444,\"x\":36,\"y\":24,\"width\":1,\"height\":1,\"room2\":441,\"x2\":26,\"y2\":29,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

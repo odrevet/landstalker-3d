@@ -8,6 +8,13 @@ metadata/hm_left = 13
 metadata/hm_top = 11
 metadata/hm_width = 26
 metadata/hm_height = 21
+metadata/room_name = "Labyrinth/B6F/402 Ifrit's Pit 4"
+metadata/room_label = "Room402"
+metadata/room_number = 402
+metadata/room_map = "Map520"
+metadata/warp_fall_dest = 403
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":402,\"x\":23,\"y\":23,\"width\":1,\"height\":1,\"room2\":401,\"x2\":23,\"y2\":23,\"type\":\"STAIR_SE\"},{\"room1\":403,\"x\":22,\"y\":31,\"width\":1,\"height\":1,\"room2\":402,\"x2\":22,\"y2\":28,\"type\":\"STAIR_SE\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

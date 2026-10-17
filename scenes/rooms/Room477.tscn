@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 12
 metadata/hm_height = 14
+metadata/room_name = "Overworld/Kado's House/477 Inside Kado's House"
+metadata/room_label = "Room477"
+metadata/room_number = 477
+metadata/room_map = "Map536"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":442,\"x\":18,\"y\":22,\"width\":1,\"height\":1,\"room2\":477,\"x2\":18,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

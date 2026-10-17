@@ -8,6 +8,13 @@ metadata/hm_left = 7
 metadata/hm_top = 7
 metadata/hm_width = 3
 metadata/hm_height = 31
+metadata/room_name = "King Nole's Cave/2F/Upper Corridor/145 Ver2 (Knights and Skeletons)"
+metadata/room_label = "Room145"
+metadata/room_number = 145
+metadata/room_map = "Map021"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

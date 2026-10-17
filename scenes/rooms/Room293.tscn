@@ -8,6 +8,13 @@ metadata/hm_left = 10
 metadata/hm_top = 11
 metadata/hm_width = 20
 metadata/hm_height = 22
+metadata/room_name = "Lake Shrine/B1F/293 Unicorn Room"
+metadata/room_label = "Room293"
+metadata/room_number = 293
+metadata/room_map = "Map145"
+metadata/warp_fall_dest = 314
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":293,\"x\":18,\"y\":24,\"width\":1,\"height\":2,\"room2\":301,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":295,\"x\":25,\"y\":19,\"width\":2,\"height\":1,\"room2\":293,\"x2\":24,\"y2\":33,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

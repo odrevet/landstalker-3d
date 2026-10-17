@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 21
 metadata/hm_height = 25
+metadata/room_name = "King Nole's Palace/3F/135 Golem Puzzle Room"
+metadata/room_label = "Room135"
+metadata/room_number = 135
+metadata/room_map = "Map455"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":130,\"x\":37,\"y\":26,\"width\":1,\"height\":1,\"room2\":135,\"x2\":32,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":134,\"x\":37,\"y\":24,\"width\":1,\"height\":1,\"room2\":135,\"x2\":32,\"y2\":18,\"type\":\"NORMAL\"},{\"room1\":136,\"x\":19,\"y\":18,\"width\":1,\"height\":1,\"room2\":135,\"x2\":18,\"y2\":36,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

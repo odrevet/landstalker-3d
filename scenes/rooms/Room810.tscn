@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 12
 metadata/hm_width = 25
 metadata/hm_height = 25
+metadata/room_name = "Tibor/810 6F"
+metadata/room_label = "Room810"
+metadata/room_number = 810
+metadata/room_map = "Map592"
+metadata/warp_fall_dest = 811
+metadata/warp_climb_dest = 808
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

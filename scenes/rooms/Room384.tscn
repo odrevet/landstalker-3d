@@ -8,6 +8,13 @@ metadata/hm_left = 6
 metadata/hm_top = 5
 metadata/hm_width = 52
 metadata/hm_height = 17
+metadata/room_name = "Labyrinth/B2F/384 Crate Stacking Puzzle Room"
+metadata/room_label = "Room384"
+metadata/room_number = 384
+metadata/room_map = "Map502"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":384,\"x\":21,\"y\":22,\"width\":1,\"height\":1,\"room2\":383,\"x2\":46,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":387,\"x\":19,\"y\":18,\"width\":1,\"height\":1,\"room2\":384,\"x2\":63,\"y2\":22,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

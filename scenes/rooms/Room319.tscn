@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 9
 metadata/hm_width = 23
 metadata/hm_height = 21
+metadata/room_name = "Lake Shrine/B2F/319 Ice Sword Switch Room"
+metadata/room_label = "Room319"
+metadata/room_number = 319
+metadata/room_map = "Map161"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":322,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":319,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

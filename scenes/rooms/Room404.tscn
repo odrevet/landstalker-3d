@@ -8,6 +8,13 @@ metadata/hm_left = 13
 metadata/hm_top = 12
 metadata/hm_width = 27
 metadata/hm_height = 37
+metadata/room_name = "Labyrinth/B7F/404 Ifrit"
+metadata/room_label = "Room404"
+metadata/room_number = 404
+metadata/room_map = "Map522"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":172,\"x\":35,\"y\":23,\"width\":2,\"height\":1,\"room2\":404,\"x2\":30,\"y2\":43,\"type\":\"NORMAL\"},{\"room1\":172,\"x\":35,\"y\":24,\"width\":2,\"height\":1,\"room2\":404,\"x2\":30,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":404,\"x\":30,\"y\":26,\"width\":2,\"height\":1,\"room2\":403,\"x2\":29,\"y2\":38,\"type\":\"NORMAL\"},{\"room1\":404,\"x\":30,\"y\":43,\"width\":2,\"height\":1,\"room2\":172,\"x2\":35,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":404,\"x\":30,\"y\":44,\"width\":2,\"height\":1,\"room2\":172,\"x2\":35,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 11
 metadata/hm_width = 23
 metadata/hm_height = 21
+metadata/room_name = "Lake Shrine/B2F/309 Wooden Platform Switch Puzzle Room"
+metadata/room_label = "Room309"
+metadata/room_number = 309
+metadata/room_map = "Map151"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":309,\"x\":19,\"y\":19,\"width\":1,\"height\":2,\"room2\":300,\"x2\":20,\"y2\":19,\"type\":\"STAIR_SW\"},{\"room1\":309,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":326,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":310,\"x\":19,\"y\":25,\"width\":1,\"height\":2,\"room2\":309,\"x2\":34,\"y2\":25,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

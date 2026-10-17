@@ -8,6 +8,13 @@ metadata/hm_left = 4
 metadata/hm_top = 2
 metadata/hm_width = 19
 metadata/hm_height = 33
+metadata/room_name = "Labyrinth/B1F/335 Green and Purple Bubbles"
+metadata/room_label = "Room355"
+metadata/room_number = 355
+metadata/room_map = "Map473"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":355,\"x\":19,\"y\":17,\"width\":1,\"height\":1,\"room2\":738,\"x2\":14,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":356,\"x\":15,\"y\":19,\"width\":1,\"height\":2,\"room2\":355,\"x2\":30,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":378,\"x\":23,\"y\":17,\"width\":2,\"height\":1,\"room2\":355,\"x2\":22,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

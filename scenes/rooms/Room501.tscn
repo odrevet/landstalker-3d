@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 12
 metadata/hm_width = 26
 metadata/hm_height = 23
+metadata/room_name = "Overworld/10 - Destel Well, Lake Shrine, Mountainous Region/501 Destel Warp 1 (Outside Tree)"
+metadata/room_label = "Room501"
+metadata/room_number = 501
+metadata/room_map = "Map619"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":501,\"x\":20,\"y\":24,\"width\":2,\"height\":1,\"room2\":513,\"x2\":31,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":501,\"x\":23,\"y\":21,\"width\":1,\"height\":2,\"room2\":513,\"x2\":38,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":501,\"x\":28,\"y\":18,\"width\":2,\"height\":1,\"room2\":502,\"x2\":35,\"y2\":37,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

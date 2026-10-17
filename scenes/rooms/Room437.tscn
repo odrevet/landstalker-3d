@@ -8,6 +8,13 @@ metadata/hm_left = 5
 metadata/hm_top = 8
 metadata/hm_width = 15
 metadata/hm_height = 33
+metadata/room_name = "Overworld/02 - Massan, Swamp Shrine, Gumi/428 Gumi 2 - Orcs"
+metadata/room_label = "Room437"
+metadata/room_number = 437
+metadata/room_map = "Map131"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":437,\"x\":19,\"y\":13,\"width\":2,\"height\":1,\"room2\":428,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":601,\"x\":45,\"y\":19,\"width\":2,\"height\":1,\"room2\":437,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

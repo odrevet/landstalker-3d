@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 7
 metadata/hm_width = 13
 metadata/hm_height = 9
+metadata/room_name = "Mercator Castle/1F/067 Servant's Quarters 1"
+metadata/room_label = "Room067"
+metadata/room_number = 67
+metadata/room_map = "Map262"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":65,\"x\":15,\"y\":26,\"width\":1,\"height\":1,\"room2\":67,\"x2\":24,\"y2\":17,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 9
 metadata/hm_top = 9
 metadata/hm_width = 52
 metadata/hm_height = 52
+metadata/room_name = "Mountainous Region/Overground/486 Northeast (Godess Statue, Bridge)"
+metadata/room_label = "Room486"
+metadata/room_number = 486
+metadata/room_map = "Map578"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":148,\"x\":28,\"y\":43,\"width\":1,\"height\":1,\"room2\":486,\"x2\":55,\"y2\":45,\"type\":\"NORMAL\"},{\"room1\":485,\"x\":27,\"y\":30,\"width\":2,\"height\":1,\"room2\":486,\"x2\":30,\"y2\":63,\"type\":\"NORMAL\"},{\"room1\":485,\"x\":40,\"y\":30,\"width\":2,\"height\":1,\"room2\":486,\"x2\":43,\"y2\":63,\"type\":\"NORMAL\"},{\"room1\":486,\"x\":32,\"y\":33,\"width\":1,\"height\":1,\"room2\":553,\"x2\":41,\"y2\":19,\"type\":\"NORMAL\"},{\"room1\":486,\"x\":43,\"y\":28,\"width\":2,\"height\":1,\"room2\":487,\"x2\":33,\"y2\":57,\"type\":\"NORMAL\"},{\"room1\":486,\"x\":49,\"y\":30,\"width\":1,\"height\":1,\"room2\":554,\"x2\":19,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":486,\"x\":55,\"y\":45,\"width\":1,\"height\":1,\"room2\":148,\"x2\":28,\"y2\":43,\"type\":\"NORMAL\"},{\"room1\":486,\"x\":57,\"y\":30,\"width\":1,\"height\":1,\"room2\":554,\"x2\":28,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":518,\"x\":27,\"y\":40,\"width\":1,\"height\":2,\"room2\":486,\"x2\":63,\"y2\":44,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

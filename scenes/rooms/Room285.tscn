@@ -8,6 +8,13 @@ metadata/hm_left = 19
 metadata/hm_top = 19
 metadata/hm_width = 30
 metadata/hm_height = 28
+metadata/room_name = "Destel Well/3F/285 Giant Key Room"
+metadata/room_label = "Room285"
+metadata/room_number = 285
+metadata/room_map = "Map433"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":283,\"x\":28,\"y\":26,\"width\":1,\"height\":2,\"room2\":285,\"x2\":41,\"y2\":32,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 3
 metadata/hm_width = 23
 metadata/hm_height = 34
+metadata/room_name = "Thieves' Hideout/4F/226 Cliff Top with Silver Knight"
+metadata/room_label = "Room226"
+metadata/room_number = 226
+metadata/room_map = "Map123"
+metadata/warp_fall_dest = 223
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":226,\"x\":17,\"y\":22,\"width\":1,\"height\":3,\"room2\":224,\"x2\":23,\"y2\":16,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

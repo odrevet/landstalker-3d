@@ -8,6 +8,13 @@ metadata/hm_left = 11
 metadata/hm_top = 7
 metadata/hm_width = 34
 metadata/hm_height = 18
+metadata/room_name = "Overworld/03 - Gumi, Ryuma, Mercator/445 Gumi 4 (Kado)"
+metadata/room_label = "Room445"
+metadata/room_number = 445
+metadata/room_map = "Map229"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":445,\"x\":13,\"y\":21,\"width\":1,\"height\":2,\"room2\":446,\"x2\":44,\"y2\":20,\"type\":\"NORMAL\"},{\"room1\":445,\"x\":28,\"y\":13,\"width\":2,\"height\":1,\"room2\":429,\"x2\":24,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":449,\"x\":17,\"y\":24,\"width\":1,\"height\":2,\"room2\":445,\"x2\":44,\"y2\":21,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

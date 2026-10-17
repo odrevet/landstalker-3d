@@ -8,6 +8,13 @@ metadata/hm_left = 2
 metadata/hm_top = 8
 metadata/hm_width = 37
 metadata/hm_height = 25
+metadata/room_name = "Overworld/04 - Mercator, Verla Tunnel, Mir's Tower/459 Outside Verla Tunnel"
+metadata/room_label = "Room459"
+metadata/room_number = 459
+metadata/room_map = "Map409"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":458,\"x\":14,\"y\":32,\"width\":1,\"height\":2,\"room2\":459,\"x2\":48,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":459,\"x\":21,\"y\":25,\"width\":1,\"height\":3,\"room2\":466,\"x2\":50,\"y2\":14,\"type\":\"NORMAL\"},{\"room1\":461,\"x\":27,\"y\":15,\"width\":1,\"height\":1,\"room2\":459,\"x2\":35,\"y2\":34,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

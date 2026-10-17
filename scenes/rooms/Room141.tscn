@@ -8,6 +8,13 @@ metadata/hm_left = 2
 metadata/hm_top = 21
 metadata/hm_width = 33
 metadata/hm_height = 35
+metadata/room_name = "Intro/Jypta Ruins/141 Statue of Jypta Room"
+metadata/room_label = "Room141"
+metadata/room_number = 141
+metadata/room_map = "Map242"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

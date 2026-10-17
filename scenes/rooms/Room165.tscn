@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 35
 metadata/hm_height = 24
+metadata/room_name = "King Nole's Cave/B1F/Golem Room 2/165 Ver1 (Raft)"
+metadata/room_label = "Room165"
+metadata/room_number = 165
+metadata/room_map = "Map026"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":163,\"x\":24,\"y\":26,\"width\":3,\"height\":1,\"room2\":165,\"x2\":19,\"y2\":35,\"type\":\"NORMAL\"},{\"room1\":163,\"x\":30,\"y\":26,\"width\":2,\"height\":1,\"room2\":165,\"x2\":25,\"y2\":32,\"type\":\"NORMAL\"},{\"room1\":165,\"x\":18,\"y\":17,\"width\":2,\"height\":1,\"room2\":170,\"x2\":34,\"y2\":39,\"type\":\"NORMAL\"},{\"room1\":165,\"x\":21,\"y\":17,\"width\":2,\"height\":1,\"room2\":171,\"x2\":17,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":165,\"x\":25,\"y\":17,\"width\":2,\"height\":1,\"room2\":167,\"x2\":22,\"y2\":24,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

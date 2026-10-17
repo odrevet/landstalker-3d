@@ -8,6 +8,13 @@ metadata/hm_left = 14
 metadata/hm_top = 14
 metadata/hm_width = 19
 metadata/hm_height = 17
+metadata/room_name = "Mountainous Region/Underpass/555 Dahl Room"
+metadata/room_label = "Room555"
+metadata/room_number = 555
+metadata/room_map = "Map557"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":548,\"x\":40,\"y\":29,\"width\":1,\"height\":2,\"room2\":555,\"x2\":30,\"y2\":23,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

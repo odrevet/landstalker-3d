@@ -8,6 +8,13 @@ metadata/hm_left = 15
 metadata/hm_top = 6
 metadata/hm_width = 37
 metadata/hm_height = 26
+metadata/room_name = "Tree Warps/5 - Mercator <-> Mountainous Region/538 Mercator"
+metadata/room_label = "Room538"
+metadata/room_number = 538
+metadata/room_map = "Map623"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":458,\"x\":28,\"y\":21,\"width\":2,\"height\":1,\"room2\":538,\"x2\":31,\"y2\":36,\"type\":\"NORMAL\"},{\"room1\":458,\"x\":31,\"y\":18,\"width\":1,\"height\":2,\"room2\":538,\"x2\":38,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":535,\"x\":31,\"y\":29,\"width\":1,\"height\":1,\"room2\":538,\"x2\":31,\"y2\":29,\"type\":\"NORMAL\"},{\"room1\":538,\"x\":31,\"y\":29,\"width\":1,\"height\":1,\"room2\":535,\"x2\":31,\"y2\":29,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

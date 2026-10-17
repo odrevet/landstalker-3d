@@ -8,6 +8,13 @@ metadata/hm_left = 0
 metadata/hm_top = 0
 metadata/hm_width = 0
 metadata/hm_height = 0
+metadata/room_name = ""
+metadata/room_label = ""
+metadata/room_number = -1
+metadata/room_map = ""
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -8,6 +8,13 @@ metadata/hm_left = 16
 metadata/hm_top = 16
 metadata/hm_width = 30
 metadata/hm_height = 32
+metadata/room_name = "King Nole's Palace/1F/123 Boulder Trap Room"
+metadata/room_label = "Room123"
+metadata/room_number = 123
+metadata/room_map = "Map444"
+metadata/warp_fall_dest = 115
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":122,\"x\":22,\"y\":33,\"width\":1,\"height\":1,\"room2\":123,\"x2\":23,\"y2\":43,\"type\":\"NORMAL\"},{\"room1\":122,\"x\":28,\"y\":33,\"width\":1,\"height\":1,\"room2\":123,\"x2\":29,\"y2\":43,\"type\":\"NORMAL\"},{\"room1\":123,\"x\":23,\"y\":40,\"width\":1,\"height\":1,\"room2\":126,\"x2\":18,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":126,\"x\":18,\"y\":21,\"width\":1,\"height\":1,\"room2\":123,\"x2\":23,\"y2\":40,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

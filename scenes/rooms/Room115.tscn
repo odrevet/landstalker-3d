@@ -8,6 +8,13 @@ metadata/hm_left = 12
 metadata/hm_top = 15
 metadata/hm_width = 29
 metadata/hm_height = 29
+metadata/room_name = "King Nole's Palace/B1F/115 Skeleton Room"
+metadata/room_label = "Room115"
+metadata/room_number = 115
+metadata/room_map = "Map445"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[{\"room1\":115,\"x\":24,\"y\":31,\"width\":1,\"height\":3,\"room2\":118,\"x2\":54,\"y2\":18,\"type\":\"NORMAL\"},{\"room1\":115,\"x\":32,\"y\":32,\"width\":1,\"height\":1,\"room2\":122,\"x2\":34,\"y2\":42,\"type\":\"NORMAL\"}]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

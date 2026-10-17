@@ -8,6 +8,13 @@ metadata/hm_left = 8
 metadata/hm_top = 8
 metadata/hm_width = 17
 metadata/hm_height = 17
+metadata/room_name = "Mercator Castle/2F/Training Room/084 Ver2 (Arthur and Silver Knight)"
+metadata/room_label = "Room084"
+metadata/room_number = 84
+metadata/room_map = "Map258"
+metadata/warp_fall_dest = -1
+metadata/warp_climb_dest = -1
+metadata/warps_json = "[]"
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 
