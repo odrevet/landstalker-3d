@@ -13,6 +13,8 @@ static var _pending_arrival: Dictionary = {}
 const WARP_TILE_BASE := 12      # warp raw coords -> heightmap cell offset
 const FALL_TRIGGER_HEIGHT := -5.0
 const SPAWN_Y_OFFSET := 0.51
+const WARP_ZONE_COLOR := Color(1.0, 0.15, 0.15, 0.45)
+const WARP_ARRIVAL_COLOR := Color(0.15, 1.0, 0.3, 0.45)
 const _SPAWN_NEIGHBORS: Array[Vector2i] = [
 	Vector2i(-1, 0), Vector2i(1, 0), Vector2i(0, -1), Vector2i(0, 1),
 	Vector2i(-1, -1), Vector2i(1, -1), Vector2i(-1, 1), Vector2i(1, 1),
@@ -74,6 +76,32 @@ func _place_hero_on_map() -> void:
 	_hero.global_position = grid_map_position(column) \
 		+ Vector3(0.0, float(top) + 1.0 + SPAWN_Y_OFFSET, 0.0)
 	_prev_hero_tile = Vector2i(int(_hero.global_position.x), int(_hero.global_position.z))
+	_debug_show_warps()
+
+
+## Zone rect (heightmap-local cells), arrival cell and destination room of a
+## warp, seen from this room either when it is room1 or via room2.
+func _warp_coordinates(warp: Dictionary) -> Dictionary:
+	var from_room1 := _room_number == int(warp.get("room1", -1))
+	var origin_raw: Vector2i
+	var arrival_raw: Vector2i
+	if from_room1:
+		origin_raw = Vector2i(int(warp.get("x", 0)), int(warp.get("y", 0)))
+		arrival_raw = Vector2i(int(warp.get("x2", 0)), int(warp.get("y2", 0)))
+	else:
+		origin_raw = Vector2i(int(warp.get("x2", 0)), int(warp.get("y2", 0)))
+		arrival_raw = Vector2i(int(warp.get("x", 0)), int(warp.get("y", 0)))
+	var destination: int
+	if from_room1:
+		destination = int(warp.get("room2", -1))
+	else:
+		destination = int(warp.get("room1", -1))
+	return {
+		"origin": origin_raw - Vector2i(WARP_TILE_BASE, WARP_TILE_BASE),
+		"size": Vector2i(int(warp.get("width", 1)), int(warp.get("height", 1))),
+		"arrival": arrival_raw - Vector2i(WARP_TILE_BASE, WARP_TILE_BASE),
+		"destination": destination,
+	}
 
 
 ## World position of a cell in our 3D grid (cell centers at half-unit steps).
@@ -108,32 +136,20 @@ func _hero_tile() -> Vector2i:
 
 func _check_warps(tile: Vector2i) -> void:
 	for warp: Dictionary in _warps:
-		var from_room1 := _room_number == int(warp.get("room1", -1))
-		var origin_raw: Vector2i
-		var arrival_raw: Vector2i
-		if from_room1:
-			origin_raw = Vector2i(int(warp.get("x", 0)), int(warp.get("y", 0)))
-			arrival_raw = Vector2i(int(warp.get("x2", 0)), int(warp.get("y2", 0)))
-		else:
-			origin_raw = Vector2i(int(warp.get("x2", 0)), int(warp.get("y2", 0)))
-			arrival_raw = Vector2i(int(warp.get("x", 0)), int(warp.get("y", 0)))
-		var origin := origin_raw - Vector2i(WARP_TILE_BASE, WARP_TILE_BASE)
-		var size := Vector2i(int(warp.get("width", 1)), int(warp.get("height", 1)))
+		var zone := _warp_coordinates(warp)
+		var origin: Vector2i = zone["origin"]
+		var arrival: Vector2i = zone["arrival"]
+		var size: Vector2i = zone["size"]
 		if tile.x < origin.x or tile.y < origin.y:
 			continue
 		if tile.x >= origin.x + size.x or tile.y >= origin.y + size.y:
 			continue
-		var destination: int
-		if from_room1:
-			destination = int(warp.get("room2", -1))
-		else:
-			destination = int(warp.get("room1", -1))
 		_pending_arrival = {
-			"room": destination,
-			"x": arrival_raw.x - WARP_TILE_BASE,
-			"y": arrival_raw.y - WARP_TILE_BASE,
+			"room": zone["destination"],
+			"x": arrival.x,
+			"y": arrival.y,
 		}
-		_change_room(destination)
+		_change_room(zone["destination"])
 		return
 
 
@@ -171,6 +187,37 @@ func _find_grid_map() -> GridMap:
 			return child
 	push_warning("No GridMap found beside the level, hero stays where it is.")
 	return null
+
+
+## Debug overlay: one translucent red cube hovering over each warp-zone cell
+## of this room, and a green cube over each arrival cell.
+func _debug_show_warps() -> void:
+	var pad := BoxMesh.new()
+	pad.size = Vector3(0.9, 0.2, 0.9)
+	for warp: Dictionary in _warps:
+		var zone := _warp_coordinates(warp)
+		var origin: Vector2i = zone["origin"]
+		var size: Vector2i = zone["size"]
+		for dx in size.x:
+			for dy in size.y:
+				_show_warp_pad(pad, Vector2i(origin.x + dx, origin.y + dy), WARP_ZONE_COLOR)
+		_show_warp_pad(pad, zone["arrival"], WARP_ARRIVAL_COLOR)
+
+
+func _show_warp_pad(pad: BoxMesh, cell: Vector2i, color: Color) -> void:
+	if not _column_tops.has(cell):
+		return
+	var pad_mesh := MeshInstance3D.new()
+	pad_mesh.mesh = pad
+	var material := StandardMaterial3D.new()
+	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	material.albedo_color = color
+	# Unshaded so pads stay visible in shadowed patches, too.
+	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	pad_mesh.material_override = material
+	pad_mesh.position = grid_map_position(cell) \
+		+ Vector3(0.0, float(_column_tops[cell]) + 1.1, 0.0)
+	add_child(pad_mesh)
 
 
 func _collect_column_tops() -> void:
