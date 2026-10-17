@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkrbyup3xittj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d0bid"]
-[ext_resource type="Texture2D" uid="uid://b5nwokeghut5k" path="res://assets/hero/down.png" id="1_r3ld0"]
+[ext_resource type="Texture2D" path="res://data/sprites/SpriteGfx000Anim001.png" id="1_r3ld0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s2337"]
 

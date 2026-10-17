@@ -1,54 +1,67 @@
 extends CharacterBody3D
 ## Hero replicated from the pygame implementation (landstalker-py hero.py).
-## Two directional sprites (up = seen from the back, down = facing camera)
-## plus horizontal flips cover the four isometric orientations; frame sets:
-## idle (1 frame), walk (8 frames, advanced on a fixed timer), jump (2 frames,
-## ascending/descending). Movement runs along the camera-relative isometric
-## diagonals with the pygame key priority: left > right > up > down.
+## Animation frames are sliced from the game's data sprite sheets
+## (data/sprites/SpriteGfx000Anim*.png, 32x48 frames), exactly like
+## drawable.extract_frames: two view sets (back for NE/NW, front for SW/SE)
+## with a horizontal flip for NW/SE; states: jump/airborne > walk > idle.
+## Movement runs along the camera-relative isometric diagonals with the
+## pygame key priority: left > right > up > down.
 
 const SPEED := 7.5                 # 2 px/frame * 60 fps / 16 px per tile
 const JUMP_VELOCITY = 4.5
-const FRAME_STEP_TIME := 0.11      # ~9 frames/s walk cycle as in sprite.py
+const FRAME_STEP_TIME := 0.1111    # 0.15/tick at 60 Hz: one frame per step
+const FRAME_WIDTH := 32
+const FRAME_HEIGHT := 48
 
 enum Orientation { NE, NW, SW, SE }
 
-# Sprite files below assets/hero/, mirroring the pygame animation config.
-const _ANIM_FILES := {
-	"up": {
-		"idle": ["up.png"],
-		"walk": ["walk_up_0.png", "walk_up_1.png", "walk_up_2.png", "walk_up_3.png",
-			"walk_up_4.png", "walk_up_5.png", "walk_up_6.png", "walk_up_7.png"],
-		"jump": ["jump_up_0.png", "jump_up_1.png"],
-	},
-	"down": {
-		"idle": ["down.png"],
-		"walk": ["walk_down_0.png", "walk_down_1.png", "walk_down_2.png", "walk_down_3.png",
-			"walk_down_4.png", "walk_down_5.png", "walk_down_6.png", "walk_down_7.png"],
-		"jump": ["jump_down_0.png", "jump_down_1.png"],
-	},
+const SPRITE_SHEET_DIR := "res://data/sprites/"
+# Matches hero.py _load_animations: animation -> [sheet file, frame count]
+const _ANIM_SHEETS := {
+	"idle_back": ["SpriteGfx000Anim000.png", 1],
+	"idle_front": ["SpriteGfx000Anim001.png", 1],
+	"walk_back": ["SpriteGfx000Anim002.png", 8],
+	"walk_front": ["SpriteGfx000Anim003.png", 8],
+	"pickup_back": ["SpriteGfx000Anim004.png", 3],
+	"pickup_front": ["SpriteGfx000Anim005.png", 3],
+	"carry_walk_back": ["SpriteGfx000Anim006.png", 8],
+	"carry_walk_front": ["SpriteGfx000Anim007.png", 8],
+	"jump_back": ["SpriteGfx000Anim008.png", 2],
+	"jump_front": ["SpriteGfx000Anim009.png", 2],
+	"carry_jump_back": ["SpriteGfx000Anim010.png", 2],
+	"carry_jump_front": ["SpriteGfx000Anim011.png", 2],
 }
 
 @onready var _sprite: Sprite3D = $Sprites
 
-var _anims := {}                 # key: "walk_up" etc -> Array[Texture2D]
+var _anims := {}                 # key: "walk_back" etc -> Array[AtlasTexture]
+var _current_frames: Array = []
 var _current_anim := ""
 var _current_frame := 0
 var _frame_timer := 0.0
 var _jumping := false
+var is_grabbing := false
 
 
 func _ready() -> void:
 	_load_animations()
-	_apply_sprite("down", "idle")
+	_set_animation("idle_front")
 
 
 func _load_animations() -> void:
-	for facing in ["up", "down"]:
-		for state in ["idle", "walk", "jump"]:
-			var textures: Array = []
-			for file: String in _ANIM_FILES[facing][state]:
-				textures.append(load("res://assets/hero/" + file))
-			_anims["%s_%s" % [state, facing]] = textures
+	for anim_name: String in _ANIM_SHEETS:
+		var cfg: Array = _ANIM_SHEETS[anim_name]
+		var sheet: Texture2D = load(SPRITE_SHEET_DIR + cfg[0])
+		var frames: Array = []
+		for i: int in cfg[1]:
+			var atlas := AtlasTexture.new()
+			atlas.atlas = sheet
+			atlas.region = Rect2(i * FRAME_WIDTH, 0, FRAME_WIDTH, FRAME_HEIGHT)
+			frames.append(atlas)
+		_anims[anim_name] = frames
+	# Carry idle shows the first pickup frame, as built in hero.py.
+	_anims["carry_idle_back"] = [_anims["pickup_back"][0]]
+	_anims["carry_idle_front"] = [_anims["pickup_front"][0]]
 
 
 func _physics_process(delta: float) -> void:
@@ -115,39 +128,40 @@ func _iso_axis(orientation: int) -> Vector3:
 	return Vector3.ZERO
 
 
-## Replicates hero.update_animation / _update_frame_index in the pygame code.
+## Replicates hero.__get_animation_name + _update_frame_index + drawable
+## update_animation_frame, with display_rotated handled by flip_h.
 func _update_animation(delta: float, moving: bool, orientation: int) -> void:
-	var facing := "up" if (orientation == Orientation.NE or orientation == Orientation.NW) else "down"
+	var prefix := "carry_" if is_grabbing else ""
+	var facing := "back" if (orientation == Orientation.NE or orientation == Orientation.NW) else "front"
+	var state: String
 	if not is_on_floor():
 		# Jump animation: frame 0 while ascending or jumping, frame 1 when falling.
-		_apply_sprite(facing, "jump")
-		_sprite.frame = 0 if (_jumping or velocity.y > 0.0) else 1
+		state = "jump"
+	elif moving:
+		state = "walk"
+	else:
+		state = "idle"
+	_set_animation(prefix + state + "_" + facing)
+	_sprite.flip_h = orientation == Orientation.NW or orientation == Orientation.SE
+
+	if _current_frames.size() <= 1:
 		return
-	var spr_name := "walk" if moving else "idle"
-	_set_flip(orientation)
-	_apply_sprite(facing, spr_name)
-	_sprite.frame = _current_frame
-	if not moving:
+	if not is_on_floor():
+		_current_frame = 0 if (_jumping or velocity.y > 0.0) else 1
 		_frame_timer = 0.0
-		return
-	_frame_timer += delta
-	if _frame_timer >= FRAME_STEP_TIME:
-		_frame_timer = 0.0
-		_current_frame = (_current_frame + 1) % _anims[_current_anim].size()
-		_sprite.frame = _current_frame
+	elif moving:
+		_frame_timer += delta
+		while _frame_timer >= FRAME_STEP_TIME:
+			_frame_timer -= FRAME_STEP_TIME
+			_current_frame = (_current_frame + 1) % _current_frames.size()
+	_sprite.texture = _current_frames[_current_frame]
 
 
-func _apply_sprite(facing: String, spr_name: String) -> void:
-	var key := "%s_%s" % [spr_name, facing]
-	if key == _current_anim:
+func _set_animation(anim_name: String) -> void:
+	if anim_name == _current_anim or not _anims.has(anim_name):
 		return
-	_current_anim = key
+	_current_anim = anim_name
 	_current_frame = 0
 	_frame_timer = 0.0
-	_sprite.texture = _anims[key][0]
-	_sprite.hframes = _anims[key].size()
-	_sprite.frame = 0
-
-
-func _set_flip(orientation: int) -> void:
-	_sprite.flip_h = orientation == Orientation.NW or orientation == Orientation.SE
+	_current_frames = _anims[anim_name]
+	_sprite.texture = _current_frames[0]
