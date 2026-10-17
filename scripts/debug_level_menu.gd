@@ -8,12 +8,24 @@ const TOGGLE_KEY := KEY_F12
 
 var _paths: PackedStringArray = []
 var _names: PackedStringArray = []
+var _titles: PackedStringArray = []
+
+var _option: OptionButton
+var _title_scan_thread: Thread
+
+## Static so a shared menu reuses titles scanned by a previous room scene.
+static var _cached_titles: PackedStringArray = PackedStringArray()
+static var _titles_loaded := false
 
 
 func _ready() -> void:
 	layer = 100
 	_collect_room_scenes()
 	_build_ui()
+
+
+func _exit_tree() -> void:
+	_stop_title_scan_thread()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -55,14 +67,73 @@ func _build_ui() -> void:
 
 	_add_room_info(box)
 
-	var option := OptionButton.new()
-	option.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	for name in _names:
-		option.add_item(name)
-	box.add_child(option)
+	_option = OptionButton.new()
+	_option.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	for i in _names.size():
+		_option.add_item(_item_text(i))
+	box.add_child(_option)
 
-	option.item_selected.connect(_on_level_selected)
-	option.select(_current_level_index())
+	_option.item_selected.connect(_on_level_selected)
+	_option.select(_current_level_index())
+
+	# Map titles live in the generated scenes; when already scanned (by a
+	# previous room scene, static cache) reuse them, else scan in the
+	# background and refresh the combo items once the thread completes.
+	if _titles_loaded:
+		_titles = _cached_titles
+		_refresh_option_items()
+	else:
+		_title_scan_thread = Thread.new()
+		_title_scan_thread.start(_scan_titles)
+
+
+func _item_text(index: int) -> String:
+	var id := _names[index]
+	var title := _titles[index] if index < _titles.size() else ""
+	return "%s · %s" % [id, title] if not title.is_empty() else id
+
+
+## Read `metadata/room_name` straight from the scene file: no instantiate,
+## no resource cache, thread-safe and fast enough for every room at once.
+func _scan_titles() -> void:
+	var regex := RegEx.new()
+	# No anchors: the first match is the room root node (only node carrying it).
+	regex.compile("metadata/room_name = \"(.*)\"")
+	var titles := PackedStringArray()
+	for path in _paths:
+		var line := ""
+		var text := FileAccess.get_file_as_string(path)
+		var result := regex.search(text)
+		if result != null:
+			line = result.get_string(1)
+		titles.append(_unescape_tscn(line))
+	_apply_titles.call_deferred(titles)
+
+
+func _unescape_tscn(value: String) -> String:
+	return value.replace("\\\"", "\"").replace("\\\\", "\\")
+
+
+## The thread must be joined before the node is freed (level switch, quit).
+func _stop_title_scan_thread() -> void:
+	if _title_scan_thread != null:
+		_title_scan_thread.wait_to_finish()
+		_title_scan_thread = null
+
+
+func _apply_titles(titles: PackedStringArray) -> void:
+	_stop_title_scan_thread()
+	_titles = titles
+	_cached_titles = titles
+	_titles_loaded = true
+	_refresh_option_items()
+
+
+func _refresh_option_items() -> void:
+	if _option == null:
+		return
+	for i in _titles.size():
+		_option.set_item_text(i, _item_text(i))
 
 
 ## Map name and warp info are stored as scene metadata by
