@@ -68,36 +68,48 @@ func _build_ui() -> void:
 ## Map name and warp info are stored as scene metadata by
 ## mapdata/convert_tmx_to_tscn.py when rooms are generated.
 func _add_room_info(box: VBoxContainer) -> void:
-	var scene := get_tree().current_scene
-	if scene == null:
+	var room := _current_room_root()
+	if room == null:
 		return
 
 	var name_label := Label.new()
-	var room_name := String(scene.get_meta("room_name", ""))
+	var room_name := String(room.get_meta("room_name", ""))
 	if not room_name.is_empty():
 		name_label.text = room_name
 		box.add_child(name_label)
 
 	var info_parts := PackedStringArray()
-	var room_map := String(scene.get_meta("room_map", ""))
+	var room_map := String(room.get_meta("room_map", ""))
 	if not room_map.is_empty():
 		info_parts.append(room_map)
-	info_parts.append(_warp_summary(scene))
+	info_parts.append(_warp_summary(room))
 	var info_label := Label.new()
 	info_label.text = " · ".join(info_parts)
 	box.add_child(info_label)
 
 
-func _warp_summary(scene: Node) -> String:
+## The room scene root normally is the current scene; fall back to searching
+## the tree so the panel also works when a room is instanced by hand.
+func _current_room_root() -> Node:
+	var scene := get_tree().current_scene
+	if scene != null:
+		return scene
+	for child in get_tree().root.get_children():
+		if child != self and child.has_meta("room_name"):
+			return child
+	return null
+
+
+func _warp_summary(room: Node) -> String:
 	var parts := PackedStringArray()
-	var warps: Array = JSON.parse_string(String(scene.get_meta("warps_json", "[]")))
+	var warps: Array = JSON.parse_string(String(room.get_meta("warps_json", "[]")))
 	parts.append(
 		"warp" if warps.size() == 1 else "%d warps" % warps.size()
 	)
-	var fall := int(scene.get_meta("warp_fall_dest", -1))
+	var fall := int(room.get_meta("warp_fall_dest", -1))
 	if fall >= 0:
 		parts.append("fall → %s" % _room_name(fall))
-	var climb := int(scene.get_meta("warp_climb_dest", -1))
+	var climb := int(room.get_meta("warp_climb_dest", -1))
 	if climb >= 0:
 		parts.append("climb → %s" % _room_name(climb))
 	return " · ".join(parts)
