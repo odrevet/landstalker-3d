@@ -15,6 +15,7 @@ const FALL_TRIGGER_HEIGHT := -5.0
 const SPAWN_Y_OFFSET := 0.51
 const WARP_ZONE_COLOR := Color(1.0, 0.15, 0.15, 0.45)
 const WARP_ARRIVAL_COLOR := Color(0.15, 1.0, 0.3, 0.45)
+const MAP_EDGE_EPS := 0.02
 const _SPAWN_NEIGHBORS: Array[Vector2i] = [
 	Vector2i(-1, 0), Vector2i(1, 0), Vector2i(0, -1), Vector2i(0, 1),
 	Vector2i(-1, -1), Vector2i(1, -1), Vector2i(-1, 1), Vector2i(1, 1),
@@ -24,6 +25,7 @@ const _SPAWN_NEIGHBORS: Array[Vector2i] = [
 
 var _grid_map: GridMap
 var _column_tops: Dictionary = {}   # column (Vector2i) -> highest layer
+var _map_bounds := Rect2i()         # walkable cell rectangle. size zero = unknown
 var _room_number := -1
 var _warps: Array = []
 var _fall_destination := -1
@@ -47,6 +49,7 @@ func _physics_process(_delta: float) -> void:
 		_check_warps(tile)
 	if _fall_destination >= 0:
 		_check_fall()
+	_clamp_hero_to_map()
 
 
 func _read_room_metadata() -> void:
@@ -77,6 +80,28 @@ func _place_hero_on_map() -> void:
 		+ Vector3(0.0, float(top) + 1.0 + SPAWN_Y_OFFSET, 0.0)
 	_prev_hero_tile = Vector2i(int(_hero.global_position.x), int(_hero.global_position.z))
 	_debug_show_warps()
+	_display_entities.call_deferred()
+
+
+## Entities: one static billboard each, feet on the tile top surface.
+## TMX positions are cursor coordinates; our 3D world is the same space
+## shifted by WARP_TILE_BASE. The TMX Z is the heightmap height level,
+## i.e. the same value as the top grid cell of the column.
+func _display_entities() -> void:
+	var entities: Array = get_parent().get_meta("entities", [])
+	var index := 0
+	for meta: Dictionary in entities:
+		var sprite := EntityBillboard.create(meta)
+		if sprite == null:
+			continue
+		var ground_z := float(meta.get("z", 0.0))
+		sprite.position = Vector3(
+			float(meta.get("x", 0.0)) - WARP_TILE_BASE,
+			1.0 + ground_z,
+			float(meta.get("y", 0.0)) - WARP_TILE_BASE)
+		sprite.name += "_%d" % index
+		index += 1
+		add_child(sprite)
 
 
 ## Zone rect (heightmap-local cells), arrival cell and destination room of a
@@ -224,10 +249,44 @@ func _collect_column_tops() -> void:
 	_column_tops.clear()
 	if _grid_map == null:
 		return
+	var initialized := false
 	for cell in _grid_map.get_used_cells():
 		var key := Vector2i(cell.x, cell.z)
 		if not _column_tops.has(key) or cell.y > _column_tops[key]:
 			_column_tops[key] = cell.y
+		if initialized:
+			var lo := Vector2i(mini(_map_bounds.position.x, key.x),
+				mini(_map_bounds.position.y, key.y))
+			var hi := Vector2i(maxi(_map_bounds.end.x - 1, key.x),
+				maxi(_map_bounds.end.y - 1, key.y))
+			_map_bounds = Rect2i(lo.x, lo.y, hi.x - lo.x + 1, hi.y - lo.y + 1)
+		else:
+			_map_bounds = Rect2i(key.x, key.y, 1, 1)
+			initialized = true
+
+
+## The hero never walks off the map: positions are clamped to the cell
+## rectangle covered by the GridMap. Pits inside the map remain open, only
+## the border is sealed.
+func _clamp_hero_to_map() -> void:
+	if _map_bounds.size == Vector2i.ZERO:
+		return
+	var pos: Vector3 = _hero.global_position
+	var clamped := false
+	if pos.x < _map_bounds.position.x + MAP_EDGE_EPS:
+		pos.x = _map_bounds.position.x + MAP_EDGE_EPS
+		clamped = true
+	elif pos.x >= _map_bounds.end.x:
+		pos.x = _map_bounds.end.x - MAP_EDGE_EPS
+		clamped = true
+	if pos.z < _map_bounds.position.y + MAP_EDGE_EPS:
+		pos.z = _map_bounds.position.y + MAP_EDGE_EPS
+		clamped = true
+	elif pos.z >= _map_bounds.end.y:
+		pos.z = _map_bounds.end.y - MAP_EDGE_EPS
+		clamped = true
+	if clamped:
+		_hero.global_position = pos
 
 
 func _columns_center() -> Vector2i:
