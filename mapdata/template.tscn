@@ -1,15 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsr1mseggsh6"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="MeshLibrary" uid="uid://dg7u68jplw3o8" path="res://meshlib/cube.tres" id="1_uebbm"]
+[ext_resource type="MeshLibrary" path="res://meshlib/cube.tres" id="1_cube"]
+[ext_resource type="PackedScene" path="res://scenes/level.tscn" id="2_level"]
 
-[node name="map" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.251159, 0, 0.200927)
+[node name="__ROOM_NAME__" type="Node3D"]
+metadata/hm_left = 0
+metadata/hm_top = 0
+metadata/hm_width = 0
+metadata/hm_height = 0
+
+[node name="Level" parent="." instance=ExtResource("2_level")]
 
 [node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.07959, 0.176829)
-mesh_library = ExtResource("1_uebbm")
+mesh_library = ExtResource("1_cube")
 cell_size = Vector3(1, 1, 1)
 data = {
 "cells": PackedInt32Array()
 }
-metadata/_editor_floor_ = Vector3(0, 0, 0)
