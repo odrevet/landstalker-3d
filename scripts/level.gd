@@ -31,6 +31,7 @@ var _warps: Array = []
 var _fall_destination := -1
 var _prev_hero_tile := Vector2i(-32768, -32768)
 var _transitioning := false
+var _entities: Array = []
 
 
 func _ready() -> void:
@@ -47,9 +48,25 @@ func _physics_process(_delta: float) -> void:
 	if tile != _prev_hero_tile:
 		_prev_hero_tile = tile
 		_check_warps(tile)
+		_trigger_entity_conditions(tile)
 	if _fall_destination >= 0:
 		_check_fall()
 	_clamp_hero_to_map()
+
+
+func _trigger_entity_conditions(hero_tile: Vector2i) -> void:
+	# WaitForCondition 1 = hero standing on the entity (py on_entity_collids).
+	for actor: EntityActor in _entities:
+		var script: ScriptCommands = actor.script_handler
+		if script == null or not script.waiting_for_condition:
+			continue
+		if script.wait_condition_type != 1:
+			continue
+		var entity_tile := (Vector2i(
+			floori(actor.position_tiles.x), floori(actor.position_tiles.y))
+			- Vector2i(WARP_TILE_BASE, WARP_TILE_BASE))
+		if entity_tile == hero_tile:
+			script.trigger_condition(1)
 
 
 func _read_room_metadata() -> void:
@@ -83,25 +100,50 @@ func _place_hero_on_map() -> void:
 	_display_entities.call_deferred()
 
 
-## Entities: one static billboard each, feet on the tile top surface.
-## TMX positions are cursor coordinates; our 3D world is the same space
-## shifted by WARP_TILE_BASE. The TMX Z is the heightmap height level,
-## i.e. the same value as the top grid cell of the column.
+## Entities: one actor each, feet on the tile top surface. TMX positions are
+## cursor coordinates; our 3D world is the same space shifted by
+## WARP_TILE_BASE. The TMX Z is the heightmap height level, i.e. the same
+## value as the top grid cell of the column. Entities with a behaviour id
+## start looping their generated script (BehaviourDb, landstalker-py style).
 func _display_entities() -> void:
+	_entities.clear()
 	var entities: Array = get_parent().get_meta("entities", [])
 	var index := 0
 	for meta: Dictionary in entities:
-		var sprite := EntityBillboard.create(meta)
-		if sprite == null:
+		var actor := EntityActor.create(meta)
+		if actor == null:
 			continue
-		var ground_z := float(meta.get("z", 0.0))
-		sprite.position = Vector3(
-			float(meta.get("x", 0.0)) - WARP_TILE_BASE,
-			1.0 + ground_z,
-			float(meta.get("y", 0.0)) - WARP_TILE_BASE)
-		sprite.name += "_%d" % index
+		actor.game_level = self
+		actor.name = "Entity%02d_%03d" % [index, int(meta.get("type", 0))]
 		index += 1
-		add_child(sprite)
+		add_child(actor)
+		actor.owner = self
+		_entities.append(actor)
+		var behaviour := int(meta.get("behaviour", 0))
+		if behaviour > 0:
+			if BehaviourDb.BEHAVIOURS.has(behaviour):
+				var entry: Array = BehaviourDb.BEHAVIOURS[behaviour]
+				var script := ScriptCommands.new(actor, self)
+				script.start_script(entry[2], true)
+				actor.script_handler = script
+			else:
+				push_warning("Behaviour %d not found for %s" % [behaviour, actor.name])
+
+
+## Column height level (highest grid cell y) for a tile; ~0 means empty.
+func column_top(tile: Vector2i) -> int:
+	if _column_tops.has(tile):
+		return _column_tops[tile]
+	return -(1 << 30)
+
+
+## Can an entity at height level z walk onto this tile? Mirrors py
+## move_until_collision checks: the tile must exist in the grid and climbing
+## more than one level is not allowed.
+func is_standable(tile: Vector2i, z: float) -> bool:
+	if not _column_tops.has(tile):
+		return false
+	return float(_column_tops[tile]) <= z + 1.0
 
 
 ## Zone rect (heightmap-local cells), arrival cell and destination room of a
@@ -269,7 +311,7 @@ func _collect_column_tops() -> void:
 ## rectangle covered by the GridMap. Pits inside the map remain open, only
 ## the border is sealed.
 func _clamp_hero_to_map() -> void:
-	if _map_bounds.size == Vector2i.ZERO:
+	if _map_bounds.size == Vector2i.ZERO or not _hero.is_inside_tree():
 		return
 	var pos: Vector3 = _hero.global_position
 	var clamped := false
