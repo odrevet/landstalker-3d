@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_mx8sn"]
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_ppgk2"]
 [ext_resource type="Script" path="res://scripts/camera_rig.gd" id="4_klq6b"]
+[ext_resource type="Script" path="res://scripts/debug_level_menu.gd" id="5_debug"]
 
 [sub_resource type="Environment" id="Environment_b121j"]
 background_mode = 1
@@ -22,10 +23,14 @@ target_path = NodePath("../Player")
 transform = Transform3D(0.70710677, -0.40824434, 0.577353, 0, 0.8165005, 0.5773447, -0.70710677, -0.40824434, 0.577353, 0, 0, 16)
 projection = 1
 size = 44.068
-near = 0.001
+near = 1.0
+far = 500.0
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_b121j")
+
+[node name="DebugLevelMenu" type="CanvasLayer" parent="."]
+script = ExtResource("5_debug")
