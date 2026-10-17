@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="MeshLibrary" path="res://meshlib/cube.tres" id="1_cube"]
+[ext_resource type="PackedScene" path="res://scenes/level.tscn" id="2_level"]
+
+[node name="Room014" type="Node3D"]
+metadata/hm_left = 12
+metadata/hm_top = 13
+metadata/hm_width = 21
+metadata/hm_height = 21
+
+[node name="Level" parent="." instance=ExtResource("2_level")]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_cube")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(11, 9, 0, 12, 9, 0, 13, 9, 0, 14, 9, 0, 15, 9, 0, 16, 9, 0, 11, 10, 0, 12, 10, 0, 13, 10, 0, 14, 10, 0, 15, 10, 0, 16, 10, 0, 11, 11, 0, 12, 11, 0, 13, 11, 0, 14, 11, 0, 15, 11, 0, 16, 11, 0, 11, 12, 0, 12, 12, 0, 13, 12, 0, 14, 12, 0, 15, 12, 0, 16, 12, 0, 11, 13, 0, 12, 13, 0, 13, 13, 0, 14, 13, 0, 15, 13, 0, 16, 13, 0, 11, 14, 0, 12, 14, 0, 13, 14, 0, 14, 14, 0, 15, 14, 0, 16, 14, 0, 11, 15, 0, 12, 15, 0, 13, 15, 0, 14, 15, 0, 15, 15, 0, 16, 15, 0, 11, 16, 0, 12, 16, 0, 13, 16, 0, 14, 16, 0, 15, 16, 0, 16, 16, 0, 7, 20, 0, 65543, 20, 0, 131079, 20, 0, 196615, 20, 0, 262151, 20, 0, 327687, 20, 0, 393223, 20, 0, 458759, 20, 0, 524295, 20, 0)
+}

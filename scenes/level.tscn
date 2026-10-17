@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_mx8sn"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_ppgk2"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="4_klq6b"]
+
+[sub_resource type="Environment" id="Environment_b121j"]
+background_mode = 1
+background_color = Color(0.327701, 0.238452, 0.16581, 1)
+ambient_light_color = Color(0.583113, 0.496075, 0.658291, 1)
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_mx8sn")
+
+[node name="Player" type="CharacterBody3D" parent="." instance=ExtResource("2_ppgk2")]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("4_klq6b")
+target_path = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(0.70710677, -0.40824434, 0.577353, 0, 0.8165005, 0.5773447, -0.70710677, -0.40824434, 0.577353, 0, 0, 16)
+projection = 1
+size = 44.068
+near = 0.001
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_b121j")
