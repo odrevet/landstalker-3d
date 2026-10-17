@@ -14,7 +14,57 @@ metadata/room_number = 139
 metadata/room_map = "Map142"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[]"
+metadata/warps = []
+metadata/entities = [
+	{
+		"behaviour": 663,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Large Grey Ball",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Large Grey Ball",
+		"type": 20,
+		"visible": false,
+		"x": 61.5,
+		"y": 24.0,
+		"z": 15.0,
+	},
+	{
+		"behaviour": 719,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Invisible Cube",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 0,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Invisible Cube",
+		"type": 81,
+		"visible": true,
+		"x": 48.5,
+		"y": 20.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

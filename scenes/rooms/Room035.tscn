@@ -14,7 +14,69 @@ metadata/room_number = 35
 metadata/room_map = "Map617"
 metadata/warp_fall_dest = 34
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":35,\"x\":37,\"y\":31,\"width\":1,\"height\":1,\"room2\":110,\"x2\":23,\"y2\":27,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 35,
+		"room2": 110,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 37,
+		"x2": 23,
+		"y": 31,
+		"y2": 27,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 429,
+		"dialogue": 1,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Zak",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 2,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Zak",
+		"type": 133,
+		"visible": true,
+		"x": 32.5,
+		"y": 31.5,
+		"z": 12.0,
+	},
+	{
+		"behaviour": 436,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Princess",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Princess",
+		"type": 118,
+		"visible": true,
+		"x": 31.5,
+		"y": 31.5,
+		"z": 12.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

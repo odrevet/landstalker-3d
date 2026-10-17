@@ -14,7 +14,69 @@ metadata/room_number = 42
 metadata/room_map = "Map292"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":39,\"x\":25,\"y\":19,\"width\":1,\"height\":1,\"room2\":42,\"x2\":14,\"y2\":20,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 39,
+		"room2": 42,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 25,
+		"x2": 14,
+		"y": 19,
+		"y2": 20,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 407,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Moralis",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Moralis",
+		"type": 128,
+		"visible": true,
+		"x": 14.5,
+		"y": 14.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Chest",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 2,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Chest",
+		"type": 18,
+		"visible": true,
+		"x": 15.5,
+		"y": 12.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -14,7 +14,56 @@ metadata/room_number = 399
 metadata/room_map = "Map517"
 metadata/warp_fall_dest = 400
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":399,\"x\":29,\"y\":19,\"width\":2,\"height\":1,\"room2\":398,\"x2\":25,\"y2\":54,\"type\":\"NORMAL\"},{\"room1\":400,\"x\":22,\"y\":22,\"width\":1,\"height\":1,\"room2\":399,\"x2\":22,\"y2\":24,\"type\":\"STAIR_SE\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 399,
+		"room2": 398,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 29,
+		"x2": 25,
+		"y": 19,
+		"y2": 54,
+	},
+	{
+		"height": 1,
+		"room1": 400,
+		"room2": 399,
+		"type": "STAIR_SE",
+		"width": 1,
+		"x": 22,
+		"x2": 22,
+		"y": 22,
+		"y2": 24,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Venus Stone",
+		"noPickup": false,
+		"noRotate": true,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Venus Stone",
+		"type": 208,
+		"visible": true,
+		"x": 22.5,
+		"y": 22.5,
+		"z": 3.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

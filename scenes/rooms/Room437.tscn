@@ -14,7 +14,80 @@ metadata/room_number = 437
 metadata/room_map = "Map131"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":437,\"x\":19,\"y\":13,\"width\":2,\"height\":1,\"room2\":428,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"},{\"room1\":601,\"x\":45,\"y\":19,\"width\":2,\"height\":1,\"room2\":437,\"x2\":19,\"y2\":44,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 437,
+		"room2": 428,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 19,
+		"x2": 19,
+		"y": 13,
+		"y2": 44,
+	},
+	{
+		"height": 1,
+		"room1": 601,
+		"room2": 437,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 45,
+		"x2": 19,
+		"y": 19,
+		"y2": 44,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 1,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": true,
+		"name": "Orc 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Orc 1",
+		"type": 4,
+		"visible": true,
+		"x": 21.5,
+		"y": 21.5,
+		"z": 1.0,
+	},
+	{
+		"behaviour": 1,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": true,
+		"name": "Orc 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Orc 1",
+		"type": 4,
+		"visible": true,
+		"x": 20.5,
+		"y": 34.5,
+		"z": 1.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -14,7 +14,56 @@ metadata/room_number = 400
 metadata/room_map = "Map518"
 metadata/warp_fall_dest = 401
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":400,\"x\":22,\"y\":22,\"width\":1,\"height\":1,\"room2\":399,\"x2\":22,\"y2\":24,\"type\":\"STAIR_SE\"},{\"room1\":401,\"x\":25,\"y\":27,\"width\":1,\"height\":1,\"room2\":400,\"x2\":25,\"y2\":28,\"type\":\"STAIR_SE\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 400,
+		"room2": 399,
+		"type": "STAIR_SE",
+		"width": 1,
+		"x": 22,
+		"x2": 22,
+		"y": 22,
+		"y2": 24,
+	},
+	{
+		"height": 1,
+		"room1": 401,
+		"room2": 400,
+		"type": "STAIR_SE",
+		"width": 1,
+		"x": 25,
+		"x2": 25,
+		"y": 27,
+		"y2": 28,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "EkeEke",
+		"noPickup": false,
+		"noRotate": true,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "EkeEke",
+		"type": 192,
+		"visible": true,
+		"x": 36.0,
+		"y": 29.0,
+		"z": 2.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

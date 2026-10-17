@@ -14,7 +14,56 @@ metadata/room_number = 532
 metadata/room_map = "Map568"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":425,\"x\":15,\"y\":49,\"width\":1,\"height\":1,\"room2\":532,\"x2\":62,\"y2\":26,\"type\":\"NORMAL\"},{\"room1\":569,\"x\":43,\"y\":33,\"width\":2,\"height\":1,\"room2\":532,\"x2\":21,\"y2\":29,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 425,
+		"room2": 532,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 15,
+		"x2": 62,
+		"y": 49,
+		"y2": 26,
+	},
+	{
+		"height": 1,
+		"room1": 569,
+		"room2": 532,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 43,
+		"x2": 21,
+		"y": 33,
+		"y2": 29,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 455,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Invisible Cube",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 0,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Invisible Cube",
+		"type": 81,
+		"visible": true,
+		"x": 55.5,
+		"y": 22.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -17,7 +17,6 @@ template.
 """
 
 import argparse
-import json
 import os
 import re
 import sys
@@ -101,6 +100,7 @@ class RoomData:
         self.warp_fall_dest: int = -1
         self.warp_climb_dest: int = -1
         self.warps: list[dict] = []
+        self.entities: list[dict] = []
 
     @classmethod
     def from_tmx_file(cls, tmx_path: str) -> "RoomData":
@@ -118,6 +118,7 @@ class RoomData:
         data.warp_fall_dest = _destination_or_none(properties.get("WarpFallDestination"))
         data.warp_climb_dest = _destination_or_none(properties.get("WarpClimbDestination"))
         data.warps = _load_warps(root)
+        data.entities = _load_entities(root)
         return data
 
 
@@ -159,6 +160,49 @@ def _load_warps(root: ET.Element) -> list[dict]:
                 }
             )
     return warps
+
+
+def _load_entities(root: ET.Element) -> list[dict]:
+    """Parse the `Entities` objectgroup: one entity per object.
+
+    Entity properties mix ints, floats, bools and strings (TMX serializes
+    everything as text) so each value is converted to a native GDScript
+    type when building the dictionary.
+    """
+    entities: list[dict] = []
+    for group in root.findall("objectgroup"):
+        if group.get("name") != "Entities":
+            continue
+        for obj in group.findall("object"):
+            entity: dict = {
+                "name": obj.get("name", ""),
+                "tile_class": obj.get("class", ""),
+            }
+            for prop in obj.findall("properties/property"):
+                name = prop.get("name", "")
+                if not name:
+                    continue
+                key = name[0].lower() + name[1:]
+                value = _parse_tmx_value(prop.get("value", ""))
+                # Coordinates are floats so all 3D positions share one type.
+                if key in ("x", "y", "z") and value is not None:
+                    value = float(value)
+                entity[key] = value
+            entities.append(entity)
+    return entities
+
+
+def _parse_tmx_value(value: str):
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    if re.fullmatch(r"[+-]?\d+", value):
+        return int(value)
+    try:
+        return float(value)
+    except ValueError:
+        return value
 
 
 def _destination_or_none(value: str | None) -> int:
@@ -212,7 +256,6 @@ def render_scene(template_path: str, room: RoomData, cells: list[int]) -> str:
             "room_name": room.room_name,
             "room_label": room.room_label,
             "room_map": room.room_map,
-            "warps_json": json.dumps(room.warps, separators=(",", ":")),
         },
     )
     content = _replace_int_metadata(
@@ -223,6 +266,8 @@ def render_scene(template_path: str, room: RoomData, cells: list[int]) -> str:
             "warp_climb_dest": room.warp_climb_dest,
         },
     )
+    content = _replace_variant_metadata(content, "warps", room.warps)
+    content = _replace_variant_metadata(content, "entities", room.entities)
     content = re.sub(
         r"metadata/hm_left = \d+", f"metadata/hm_left = {room.heightmap.left_offset}", content
     )
@@ -256,6 +301,46 @@ def _replace_int_metadata(content: str, values: dict[str, int]) -> str:
             rf"metadata/{name} = -?\d+", f"metadata/{name} = {value}", content
         )
     return content
+
+
+# The template stores native Variant placeholders (empty arrays) which the
+# serializer replaces by multi-line GDScript array/dictionary literals, so
+# scenes can read them with `get_meta()` without any JSON round-trip.
+def _replace_variant_metadata(content: str, name: str, value) -> str:
+    return re.sub(
+        rf"metadata/{name} = \[.*",
+        lambda match: f"metadata/{name} = {_format_gd_variant(value, 0)}",
+        content,
+        count=1,
+    )
+
+
+def _format_gd_variant(value, indent: int = 0) -> str:
+    """Serialize a python value the way Godot stores Variants in .tscn files."""
+    pad = "\t" * indent
+    inner_pad = "\t" * (indent + 1)
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return repr(value)
+    if isinstance(value, str):
+        return '"' + _escape_tscn_string(value) + '"'
+    if isinstance(value, list):
+        if not value:
+            return "[]"
+        items = ",\n".join(
+            f"{inner_pad}{_format_gd_variant(item, indent + 1)}" for item in value
+        )
+        return f"[\n{items},\n{pad}]"
+    if isinstance(value, dict):
+        if not value:
+            return "{}"
+        rows = ",\n".join(
+            f'{inner_pad}"{key}": {_format_gd_variant(item, indent + 1)}'
+            for key, item in sorted(value.items())
+        )
+        return f"{{\n{rows},\n{pad}}}"
+    raise TypeError(f"unserializable type: {type(value)}")
 
 
 def convert_tmx_to_tscn(tmx_path: str, template_path: str, output_path: str, room_name: str | None) -> str:

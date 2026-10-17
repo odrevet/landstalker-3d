@@ -14,7 +14,67 @@ metadata/room_number = 70
 metadata/room_map = "Map265"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":32,\"x\":43,\"y\":27,\"width\":2,\"height\":1,\"room2\":70,\"x2\":15,\"y2\":32,\"type\":\"NORMAL\"},{\"room1\":68,\"x\":13,\"y\":23,\"width\":1,\"height\":2,\"room2\":70,\"x2\":26,\"y2\":28,\"type\":\"NORMAL\"},{\"room1\":85,\"x\":13,\"y\":16,\"width\":1,\"height\":2,\"room2\":70,\"x2\":26,\"y2\":18,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 32,
+		"room2": 70,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 43,
+		"x2": 15,
+		"y": 27,
+		"y2": 32,
+	},
+	{
+		"height": 2,
+		"room1": 68,
+		"room2": 70,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 13,
+		"x2": 26,
+		"y": 23,
+		"y2": 28,
+	},
+	{
+		"height": 2,
+		"room1": 85,
+		"room2": 70,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 13,
+		"x2": 26,
+		"y": 16,
+		"y2": 18,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Woman 2",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Woman 2",
+		"type": 79,
+		"visible": true,
+		"x": 16.0,
+		"y": 30.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

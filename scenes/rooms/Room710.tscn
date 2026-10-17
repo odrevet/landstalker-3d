@@ -14,7 +14,69 @@ metadata/room_number = 710
 metadata/room_map = "Map397"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":710,\"x\":16,\"y\":18,\"width\":1,\"height\":1,\"room2\":707,\"x2\":20,\"y2\":18,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 710,
+		"room2": 707,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 16,
+		"x2": 20,
+		"y": 18,
+		"y2": 18,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 274,
+		"dialogue": 1,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Woman 3",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 3,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Woman 3",
+		"type": 107,
+		"visible": true,
+		"x": 16.5,
+		"y": 19.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 273,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Lord Arthur",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Lord Arthur",
+		"type": 110,
+		"visible": true,
+		"x": 15.5,
+		"y": 18.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

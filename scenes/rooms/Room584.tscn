@@ -14,7 +14,80 @@ metadata/room_number = 584
 metadata/room_map = "Map361"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = 563
-metadata/warps_json = "[{\"room1\":579,\"x\":30,\"y\":16,\"width\":1,\"height\":1,\"room2\":584,\"x2\":39,\"y2\":39,\"type\":\"NORMAL\"},{\"room1\":584,\"x\":39,\"y\":39,\"width\":1,\"height\":1,\"room2\":579,\"x2\":30,\"y2\":16,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 579,
+		"room2": 584,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 30,
+		"x2": 39,
+		"y": 16,
+		"y2": 39,
+	},
+	{
+		"height": 1,
+		"room1": 584,
+		"room2": 579,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 39,
+		"x2": 30,
+		"y": 39,
+		"y2": 16,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Golem Statue 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Golem Statue 1",
+		"type": 119,
+		"visible": true,
+		"x": 23.0,
+		"y": 14.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Golem Statue 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Golem Statue 1",
+		"type": 119,
+		"visible": true,
+		"x": 26.5,
+		"y": 14.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

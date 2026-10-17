@@ -14,7 +14,80 @@ metadata/room_number = 105
 metadata/room_map = "Map309"
 metadata/warp_fall_dest = 104
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":105,\"x\":27,\"y\":24,\"width\":1,\"height\":2,\"room2\":104,\"x2\":27,\"y2\":24,\"type\":\"NORMAL\"},{\"room1\":105,\"x\":27,\"y\":31,\"width\":1,\"height\":1,\"room2\":107,\"x2\":19,\"y2\":23,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 2,
+		"room1": 105,
+		"room2": 104,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 27,
+		"x2": 27,
+		"y": 24,
+		"y2": 24,
+	},
+	{
+		"height": 1,
+		"room1": 105,
+		"room2": 107,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 27,
+		"x2": 19,
+		"y": 31,
+		"y2": 23,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 423,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Knight 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Knight 1",
+		"type": 29,
+		"visible": true,
+		"x": 34.5,
+		"y": 15.5,
+		"z": 4.0,
+	},
+	{
+		"behaviour": 424,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Knight 1",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Knight 1",
+		"type": 29,
+		"visible": true,
+		"x": 35.5,
+		"y": 15.5,
+		"z": 4.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -14,7 +14,56 @@ metadata/room_number = 752
 metadata/room_map = "Map031"
 metadata/warp_fall_dest = 750
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":751,\"x\":26,\"y\":51,\"width\":2,\"height\":1,\"room2\":752,\"x2\":23,\"y2\":48,\"type\":\"NORMAL\"},{\"room1\":752,\"x\":23,\"y\":34,\"width\":2,\"height\":1,\"room2\":754,\"x2\":24,\"y2\":32,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 751,
+		"room2": 752,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 26,
+		"x2": 23,
+		"y": 51,
+		"y2": 48,
+	},
+	{
+		"height": 1,
+		"room1": 752,
+		"room2": 754,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 23,
+		"x2": 24,
+		"y": 34,
+		"y2": 32,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 1,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Mir",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 0,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Mir",
+		"type": 124,
+		"visible": true,
+		"x": 16.5,
+		"y": 16.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

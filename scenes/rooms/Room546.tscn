@@ -14,7 +14,42 @@ metadata/room_number = 546
 metadata/room_map = "Map556"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":546,\"x\":28,\"y\":24,\"width\":2,\"height\":1,\"room2\":551,\"x2\":34,\"y2\":27,\"type\":\"NORMAL\"},{\"room1\":546,\"x\":28,\"y\":50,\"width\":1,\"height\":2,\"room2\":547,\"x2\":30,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":548,\"x\":56,\"y\":15,\"width\":2,\"height\":1,\"room2\":546,\"x2\":28,\"y2\":60,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 546,
+		"room2": 551,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 28,
+		"x2": 34,
+		"y": 24,
+		"y2": 27,
+	},
+	{
+		"height": 2,
+		"room1": 546,
+		"room2": 547,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 28,
+		"x2": 30,
+		"y": 50,
+		"y2": 23,
+	},
+	{
+		"height": 1,
+		"room1": 548,
+		"room2": 546,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 56,
+		"x2": 28,
+		"y": 15,
+		"y2": 60,
+	},
+]
+metadata/entities = []
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

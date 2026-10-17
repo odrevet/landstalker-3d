@@ -14,7 +14,56 @@ metadata/room_number = 192
 metadata/room_map = "Map075"
 metadata/warp_fall_dest = 207
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":192,\"x\":19,\"y\":22,\"width\":2,\"height\":1,\"room2\":194,\"x2\":18,\"y2\":39,\"type\":\"NORMAL\"},{\"room1\":192,\"x\":30,\"y\":22,\"width\":2,\"height\":1,\"room2\":214,\"x2\":25,\"y2\":34,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 192,
+		"room2": 194,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 19,
+		"x2": 18,
+		"y": 22,
+		"y2": 39,
+	},
+	{
+		"height": 1,
+		"room1": 192,
+		"room2": 214,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 30,
+		"x2": 25,
+		"y": 22,
+		"y2": 34,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Dead Body",
+		"noPickup": true,
+		"noRotate": true,
+		"orientation": "NE",
+		"palette": 2,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Dead Body",
+		"type": 78,
+		"visible": true,
+		"x": 39.5,
+		"y": 28.5,
+		"z": 1.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

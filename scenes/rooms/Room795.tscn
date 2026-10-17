@@ -14,7 +14,89 @@ metadata/room_number = 795
 metadata/room_map = "Map377"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":795,\"x\":19,\"y\":21,\"width\":1,\"height\":2,\"room2\":790,\"x2\":16,\"y2\":19,\"type\":\"STAIR_SW\"},{\"room1\":795,\"x\":19,\"y\":23,\"width\":1,\"height\":1,\"room2\":790,\"x2\":16,\"y2\":21,\"type\":\"STAIR_SW\"},{\"room1\":795,\"x\":23,\"y\":16,\"width\":2,\"height\":1,\"room2\":792,\"x2\":20,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":795,\"x\":29,\"y\":16,\"width\":2,\"height\":1,\"room2\":792,\"x2\":26,\"y2\":33,\"type\":\"NORMAL\"},{\"room1\":800,\"x\":19,\"y\":16,\"width\":2,\"height\":1,\"room2\":795,\"x2\":30,\"y2\":18,\"type\":\"STAIR_SE\"}]"
+metadata/warps = [
+	{
+		"height": 2,
+		"room1": 795,
+		"room2": 790,
+		"type": "STAIR_SW",
+		"width": 1,
+		"x": 19,
+		"x2": 16,
+		"y": 21,
+		"y2": 19,
+	},
+	{
+		"height": 1,
+		"room1": 795,
+		"room2": 790,
+		"type": "STAIR_SW",
+		"width": 1,
+		"x": 19,
+		"x2": 16,
+		"y": 23,
+		"y2": 21,
+	},
+	{
+		"height": 1,
+		"room1": 795,
+		"room2": 792,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 23,
+		"x2": 20,
+		"y": 16,
+		"y2": 33,
+	},
+	{
+		"height": 1,
+		"room1": 795,
+		"room2": 792,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 29,
+		"x2": 26,
+		"y": 16,
+		"y2": 33,
+	},
+	{
+		"height": 1,
+		"room1": 800,
+		"room2": 795,
+		"type": "STAIR_SE",
+		"width": 2,
+		"x": 19,
+		"x2": 30,
+		"y": 16,
+		"y2": 18,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 362,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Large Wood Platform",
+		"noPickup": true,
+		"noRotate": true,
+		"orientation": "NE",
+		"palette": 2,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Large Wood Platform",
+		"type": 76,
+		"visible": true,
+		"x": 21.5,
+		"y": 22.0,
+		"z": 5.5,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

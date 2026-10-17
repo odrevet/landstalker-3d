@@ -14,7 +14,56 @@ metadata/room_number = 71
 metadata/room_map = "Map266"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":55,\"x\":22,\"y\":17,\"width\":1,\"height\":2,\"room2\":71,\"x2\":23,\"y2\":17,\"type\":\"NORMAL\"},{\"room1\":71,\"x\":18,\"y\":15,\"width\":1,\"height\":1,\"room2\":65,\"x2\":18,\"y2\":42,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 2,
+		"room1": 55,
+		"room2": 71,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 22,
+		"x2": 23,
+		"y": 17,
+		"y2": 17,
+	},
+	{
+		"height": 1,
+		"room1": 71,
+		"room2": 65,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 18,
+		"x2": 18,
+		"y": 15,
+		"y2": 42,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Chef",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Chef",
+		"type": 117,
+		"visible": true,
+		"x": 15.5,
+		"y": 19.5,
+		"z": 1.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

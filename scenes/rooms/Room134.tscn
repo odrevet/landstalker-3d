@@ -14,7 +14,69 @@ metadata/room_number = 134
 metadata/room_map = "Map456"
 metadata/warp_fall_dest = 130
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":134,\"x\":37,\"y\":24,\"width\":1,\"height\":1,\"room2\":135,\"x2\":32,\"y2\":18,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 134,
+		"room2": 135,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 37,
+		"x2": 32,
+		"y": 24,
+		"y2": 18,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 757,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": true,
+		"name": "Large Red Ball",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Large Red Ball",
+		"type": 155,
+		"visible": false,
+		"x": 31.5,
+		"y": 41.5,
+		"z": 10.0,
+	},
+	{
+		"behaviour": 201,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Square Switch",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 2,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Square Switch",
+		"type": 84,
+		"visible": true,
+		"x": 37.5,
+		"y": 28.5,
+		"z": 4.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

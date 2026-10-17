@@ -14,7 +14,80 @@ metadata/room_number = 745
 metadata/room_map = "Map549"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":737,\"x\":47,\"y\":20,\"width\":1,\"height\":1,\"room2\":745,\"x2\":18,\"y2\":23,\"type\":\"NORMAL\"},{\"room1\":745,\"x\":19,\"y\":15,\"width\":1,\"height\":1,\"room2\":746,\"x2\":17,\"y2\":21,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 737,
+		"room2": 745,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 47,
+		"x2": 18,
+		"y": 20,
+		"y2": 23,
+	},
+	{
+		"height": 1,
+		"room1": 745,
+		"room2": 746,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 19,
+		"x2": 17,
+		"y": 15,
+		"y2": 21,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Female Dwarf",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Female Dwarf",
+		"type": 72,
+		"visible": true,
+		"x": 17.5,
+		"y": 15.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Hotel Register",
+		"noPickup": false,
+		"noRotate": false,
+		"orientation": "NW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Hotel Register",
+		"type": 229,
+		"visible": true,
+		"x": 15.5,
+		"y": 20.5,
+		"z": 1.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

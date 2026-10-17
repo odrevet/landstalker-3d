@@ -14,7 +14,80 @@ metadata/room_number = 426
 metadata/room_map = "Map008"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":425,\"x\":13,\"y\":55,\"width\":1,\"height\":2,\"room2\":426,\"x2\":49,\"y2\":25,\"type\":\"NORMAL\"},{\"room1\":426,\"x\":46,\"y\":45,\"width\":1,\"height\":2,\"room2\":177,\"x2\":42,\"y2\":14,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 2,
+		"room1": 425,
+		"room2": 426,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 13,
+		"x2": 49,
+		"y": 55,
+		"y2": 25,
+	},
+	{
+		"height": 2,
+		"room1": 426,
+		"room2": 177,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 46,
+		"x2": 42,
+		"y": 45,
+		"y2": 14,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 116,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": false,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Raft",
+		"noPickup": true,
+		"noRotate": true,
+		"orientation": "SE",
+		"palette": 3,
+		"reserved": false,
+		"solid": true,
+		"speed": 4,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Raft",
+		"type": 53,
+		"visible": true,
+		"x": 26.5,
+		"y": 36.5,
+		"z": 15.0,
+	},
+	{
+		"behaviour": 117,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Child Red Bear",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Child Red Bear",
+		"type": 47,
+		"visible": true,
+		"x": 31.5,
+		"y": 25.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

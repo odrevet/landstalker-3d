@@ -14,7 +14,56 @@ metadata/room_number = 691
 metadata/room_map = "Map056"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":630,\"x\":36,\"y\":27,\"width\":1,\"height\":1,\"room2\":691,\"x2\":21,\"y2\":17,\"type\":\"NORMAL\"},{\"room1\":691,\"x\":13,\"y\":18,\"width\":1,\"height\":1,\"room2\":693,\"x2\":20,\"y2\":18,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 630,
+		"room2": 691,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 36,
+		"x2": 21,
+		"y": 27,
+		"y2": 17,
+	},
+	{
+		"height": 1,
+		"room1": 691,
+		"room2": 693,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 13,
+		"x2": 20,
+		"y": 18,
+		"y2": 18,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Soldier",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Soldier",
+		"type": 50,
+		"visible": true,
+		"x": 17.5,
+		"y": 18.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

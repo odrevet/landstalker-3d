@@ -14,7 +14,56 @@ metadata/room_number = 670
 metadata/room_map = "Map387"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":630,\"x\":20,\"y\":31,\"width\":1,\"height\":1,\"room2\":670,\"x2\":28,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":670,\"x\":18,\"y\":17,\"width\":1,\"height\":2,\"room2\":705,\"x2\":29,\"y2\":27,\"type\":\"STAIR_SW\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 630,
+		"room2": 670,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 20,
+		"x2": 28,
+		"y": 31,
+		"y2": 21,
+	},
+	{
+		"height": 2,
+		"room1": 670,
+		"room2": 705,
+		"type": "STAIR_SW",
+		"width": 1,
+		"x": 18,
+		"x2": 29,
+		"y": 17,
+		"y2": 27,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Woman 2",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Woman 2",
+		"type": 79,
+		"visible": true,
+		"x": 20.5,
+		"y": 20.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

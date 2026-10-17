@@ -14,7 +14,69 @@ metadata/room_number = 103
 metadata/room_map = "Map278"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":103,\"x\":13,\"y\":19,\"width\":1,\"height\":2,\"room2\":94,\"x2\":24,\"y2\":20,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 2,
+		"room1": 103,
+		"room2": 94,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 13,
+		"x2": 24,
+		"y": 19,
+		"y2": 20,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 1,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Dexter",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Dexter",
+		"type": 52,
+		"visible": true,
+		"x": 19.5,
+		"y": 18.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 1,
+		"dialogue": 1,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Woman 2",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "NW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 1,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Woman 2",
+		"type": 79,
+		"visible": true,
+		"x": 18.5,
+		"y": 20.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

@@ -14,7 +14,69 @@ metadata/room_number = 683
 metadata/room_map = "Map399"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":633,\"x\":24,\"y\":50,\"width\":1,\"height\":1,\"room2\":683,\"x2\":27,\"y2\":25,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 633,
+		"room2": 683,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 24,
+		"x2": 27,
+		"y": 50,
+		"y2": 25,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Soldier",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Soldier",
+		"type": 50,
+		"visible": true,
+		"x": 22.5,
+		"y": 24.5,
+		"z": 0.0,
+	},
+	{
+		"behaviour": 0,
+		"dialogue": 1,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Old Man",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Old Man",
+		"type": 1,
+		"visible": true,
+		"x": 24.5,
+		"y": 21.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

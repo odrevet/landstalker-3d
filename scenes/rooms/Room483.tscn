@@ -14,7 +14,56 @@ metadata/room_number = 483
 metadata/room_map = "Map574"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":483,\"x\":33,\"y\":14,\"width\":2,\"height\":1,\"room2\":488,\"x2\":41,\"y2\":62,\"type\":\"NORMAL\"},{\"room1\":726,\"x\":28,\"y\":25,\"width\":2,\"height\":1,\"room2\":483,\"x2\":28,\"y2\":62,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 483,
+		"room2": 488,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 33,
+		"x2": 41,
+		"y": 14,
+		"y2": 62,
+	},
+	{
+		"height": 1,
+		"room1": 726,
+		"room2": 483,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 28,
+		"x2": 28,
+		"y": 25,
+		"y2": 62,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": false,
+		"hostile": false,
+		"name": "Mars Stone",
+		"noPickup": false,
+		"noRotate": true,
+		"orientation": "NW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Mars Stone",
+		"type": 205,
+		"visible": true,
+		"x": 25.5,
+		"y": 46.5,
+		"z": 4.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

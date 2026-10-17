@@ -82,6 +82,8 @@ func _add_room_info(box: VBoxContainer) -> void:
 	var room_map := String(room.get_meta("room_map", ""))
 	if not room_map.is_empty():
 		info_parts.append(room_map)
+	var entities: Array = room.get_meta("entities", [])
+	info_parts.append("%d entities" % entities.size())
 	info_parts.append(_warp_summary(room))
 	var info_label := Label.new()
 	info_label.text = " · ".join(info_parts)
@@ -102,7 +104,7 @@ func _current_room_root() -> Node:
 
 func _warp_summary(room: Node) -> String:
 	var parts := PackedStringArray()
-	var warps: Array = JSON.parse_string(String(room.get_meta("warps_json", "[]")))
+	var warps: Array = room.get_meta("warps", [])
 	parts.append(
 		"warp" if warps.size() == 1 else "%d warps" % warps.size()
 	)

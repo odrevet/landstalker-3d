@@ -14,7 +14,56 @@ metadata/room_number = 44
 metadata/room_map = "Map294"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":39,\"x\":33,\"y\":22,\"width\":2,\"height\":1,\"room2\":44,\"x2\":14,\"y2\":21,\"type\":\"NORMAL\"},{\"room1\":44,\"x\":15,\"y\":13,\"width\":1,\"height\":1,\"room2\":45,\"x2\":19,\"y2\":25,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 39,
+		"room2": 44,
+		"type": "NORMAL",
+		"width": 2,
+		"x": 33,
+		"x2": 14,
+		"y": 22,
+		"y2": 21,
+	},
+	{
+		"height": 1,
+		"room1": 44,
+		"room2": 45,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 15,
+		"x2": 19,
+		"y": 13,
+		"y2": 25,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 433,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Moralis",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SW",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 2,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Moralis",
+		"type": 128,
+		"visible": true,
+		"x": 28.5,
+		"y": 12.5,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 

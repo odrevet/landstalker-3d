@@ -14,7 +14,45 @@ metadata/room_number = 727
 metadata/room_map = "Map113"
 metadata/warp_fall_dest = -1
 metadata/warp_climb_dest = -1
-metadata/warps_json = "[{\"room1\":726,\"x\":48,\"y\":50,\"width\":1,\"height\":1,\"room2\":727,\"x2\":22,\"y2\":17,\"type\":\"NORMAL\"}]"
+metadata/warps = [
+	{
+		"height": 1,
+		"room1": 726,
+		"room2": 727,
+		"type": "NORMAL",
+		"width": 1,
+		"x": 48,
+		"x2": 22,
+		"y": 50,
+		"y2": 17,
+	},
+]
+metadata/entities = [
+	{
+		"behaviour": 0,
+		"dialogue": 0,
+		"friction": true,
+		"gravity": true,
+		"hasDialogue": true,
+		"hostile": false,
+		"name": "Male Dwarf",
+		"noPickup": true,
+		"noRotate": false,
+		"orientation": "SE",
+		"palette": 1,
+		"reserved": false,
+		"solid": true,
+		"speed": 0,
+		"tileCopy": false,
+		"tileSource": 0,
+		"tile_class": "Male Dwarf",
+		"type": 48,
+		"visible": true,
+		"x": 18.0,
+		"y": 19.0,
+		"z": 0.0,
+	},
+]
 
 [node name="Level" parent="." instance=ExtResource("2_level")]
 
